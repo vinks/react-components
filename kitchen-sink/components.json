@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Section 1",
+    "id": "section-1",
+    "components": [
+      {
+        "id": "background-dimmer",
+        "title": "Background dimmer",
+        "desc": "background dimmer",
+        "url": "https://github.com/buildo/react-components/tree/master/src/background-dimmer",
+        "examples": [
+          "react-components/master/examples/components/BackgroundDimmer.example"
+        ]
+      },
+      {
+        "id": "flex-view",
+        "title": "FlexView",
+        "desc": "FlexView",
+        "url": "https://github.com/buildo/react-components/tree/master/src/flex",
+        "examples": [
+          "react-components/master/examples/components/flex/Column.example",
+          "react-components/master/examples/components/flex/Row.example"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Section 2",
+    "id": "section-2",
+    "components": [
+      {
+        "id": "loading-spinner",
+        "title": "LoadingSpinner",
+        "desc": "LoadingSpinner",
+        "url": "https://github.com/buildo/react-components/tree/master/src/loading-spinner",
+        "examples": [
+          "react-components/master/examples/components/LoadingSpinner.example"
+        ]
+      },
+      {
+        "id": "modal-manager",
+        "title": "ModalManager",
+        "desc": "ModalManager",
+        "url": "https://github.com/buildo/react-components/tree/master/src/modal-manager",
+        "examples": [
+          "react-components/master/examples/components/ModalManager.example"
+        ]
+      },
+      {
+        "id": "mobile-detector",
+        "title": "MobileDetector",
+        "desc": "MobileDetector",
+        "url": "https://github.com/buildo/react-components/tree/master/src/mobile-detector",
+        "examples": [
+          "react-components/master/examples/components/MobileDetector.example"
+        ]
+      },
+      {
+        "id": "scroll-view",
+        "title": "ScrollView",
+        "desc": "ScrollView",
+        "url": "https://github.com/buildo/react-components/tree/master/src/scroll-view",
+        "examples": [
+          "react-components/master/examples/components/scroll/StopPropagation.example",
+          "react-components/master/examples/components/scroll/ScrollTo.example"
+        ]
+      },
+      {
+        "id": "text-overflow",
+        "title": "TextOverflow",
+        "desc": "TextOverflow",
+        "url": "https://github.com/buildo/react-components/tree/master/src/text-overflow",
+        "examples": [
+          "react-components/master/examples/components/text-overflow/Default.example",
+          "react-components/master/examples/components/text-overflow/CustomPopover.example",
+          "react-components/master/examples/components/text-overflow/WithFlexView.example"
+        ]
+      },
+      {
+        "id": "popover",
+        "title": "Popover",
+        "desc": "Popover",
+        "url": "https://github.com/buildo/react-components/tree/master/src/popover",
+        "examples": [
+          "react-components/master/examples/components/popover/Relative.example",
+          "react-components/master/examples/components/popover/Absolute.example"
+        ]
+      },
+      {
+        "id": "toaster",
+        "title": "Toaster",
+        "desc": "Toaster",
+        "url": "https://github.com/buildo/react-components/tree/master/src/toaster",
+        "examples": [
+          "react-components/master/examples/components/toaster/Inline.example",
+          "react-components/master/examples/components/toaster/Attached.example"
+        ]
+      }
+    ]
+  }
+]

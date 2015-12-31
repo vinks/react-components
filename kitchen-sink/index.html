@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Partify</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.0.0/codemirror.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.0.0/theme/monokai.min.css"/>
+    {% for (var chunk in o.htmlWebpackPlugin.files.chunks.main.css) { %}
+      <link rel="stylesheet" href="__BUILD_PATH__{%=o.htmlWebpackPlugin.files.chunks.main.css[chunk]%}__GZIP__" media="all">
+    {% } %}
+  </head>
+  <body>
+    <div id='app'></div>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.0.0/codemirror.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.0.0/mode/javascript/javascript.min.js"></script>
+    {%
+      for (var chunk in o.htmlWebpackPlugin.files.chunks) {
+    %}<script type='text/javascript' src="__BUILD_PATH__{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}__GZIP__"></script>{%
+      }
+    %}
+  </body>
+</html>
