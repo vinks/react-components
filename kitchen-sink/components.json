@@ -31,6 +31,18 @@
           "rc-datepicker/master/examples/DatePickerInput.example",
           "rc-datepicker/master/examples/DatePicker.example"
         ]
+      },
+      {
+        "id": "react-input-link",
+        "title": "InputLink",
+        "desc": "ReactInputLink is a replacement for the base input react component capable of rendering a child (link, button...) inside the input itself. It supports the same props of react input.",
+        "url": "https://github.com/buildo/react-input-link",
+        "examples": [
+          "react-input-link/master/examples/PlainText.example",
+          "react-input-link/master/examples/Password.example",
+          "react-input-link/master/examples/Button.example",
+          "react-input-link/master/examples/Anything.example"
+        ]
       }
     ]
   },

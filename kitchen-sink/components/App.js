@@ -6,6 +6,7 @@ import { props, t } from 'revenge';
 import KitchenSink from '../../src/kitchen-sink';
 import * as brc from '../../src';
 import * as RCDatepicker from 'rc-datepicker/src';
+import InputLink from 'react-input-link/src';
 import components from 'raw!../components.json';
 
 require('./app.scss');
@@ -14,7 +15,8 @@ const scope = {
   React,
   ...lodash,
   ...brc,
-  ...RCDatepicker
+  ...RCDatepicker,
+  InputLink
 };
 
 @props({
