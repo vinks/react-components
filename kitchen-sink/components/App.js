@@ -45,7 +45,7 @@ export default class App extends React.Component {
         () => this.loadComponent(componentId)
       );
     } else {
-      this.axios.get('react-kitchen-sink/gh-pages/src/components.json')
+      this.axios.get('react-components/gh-pages/kitchen-sink/components.json')
         .then((res) => {
           const sections = res.data;
           this.setState(
