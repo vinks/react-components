@@ -5,6 +5,7 @@ import { find } from 'lodash';
 import { props, t } from 'revenge';
 import KitchenSink from 'buildo-react-components/src/kitchen-sink';
 import * as brc from 'buildo-react-components/src';
+import components from 'raw!../components.json';
 
 require('./app.scss');
 
@@ -33,13 +34,21 @@ export default class App extends React.Component {
 
   loadJSON = () => {
     const { query: { componentId } } = this.props;
-    this.axios.get('react-kitchen-sink/master/src/components.json')
-      .then((res) => {
-        const sections = res.data;
-        this.setState(
-          { initialSections: sections, sections },
-          () => this.loadComponent(componentId))
-      });
+    if (process.env.NODE_ENV === 'development') {
+      const sections = JSON.parse(components)
+      this.setState(
+        { sections },
+        () => this.loadComponent(componentId)
+      );
+    } else {
+      this.axios.get('react-kitchen-sink/master/src/components.json')
+        .then((res) => {
+          const sections = res.data;
+          this.setState(
+            { sections },
+            () => this.loadComponent(componentId))
+        });
+    }
   }
 
   loadComponent = (id) => {
