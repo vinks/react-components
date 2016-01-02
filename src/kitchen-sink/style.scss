@@ -26,10 +26,17 @@
       box-shadow: 0 1px 4px 1px rgba(0,0,0,.1);
 
       .live-demo {
+<<<<<<< 5a8683086308369f9a97ddddfc5c18b605776cf4
         position: relative;
         .playground, .CodeMirror {
           // border-bottom-left-radius: 5px;
           // border-bottom-right-radius: 5px;
+=======
+
+        .playground {
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+>>>>>>> style fixes
           overflow: hidden;
         }
 
