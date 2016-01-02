@@ -4,6 +4,7 @@ var webpack = require('webpack');
 var paths = {
   ASSETS: path.resolve(__dirname, './assets'),
   SRC: path.resolve(__dirname),
+  COMPONENTS: path.resolve(__dirname, '../src'),
   DIST: path.resolve(__dirname, './build')
 };
 
@@ -15,7 +16,7 @@ module.exports = {
         test: /\.jsx?$/,
         loader: 'babel?stage=0&loose',
         exclude: [ paths.ASSETS ],
-        include: [ paths.SRC, /buildo-react-components/ ]
+        include: [ paths.COMPONENTS, paths.SRC, /rc-datepicker/ ]
       }
     ],
     preLoaders: [

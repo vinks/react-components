@@ -3,8 +3,9 @@ import _axios from 'axios';
 import lodash from 'lodash';
 import { find } from 'lodash';
 import { props, t } from 'revenge';
-import KitchenSink from 'buildo-react-components/src/kitchen-sink';
-import * as brc from 'buildo-react-components/src';
+import KitchenSink from '../../src/kitchen-sink';
+import * as brc from '../../src';
+import * as RCDatepicker from 'rc-datepicker/src';
 import components from 'raw!../components.json';
 
 require('./app.scss');
