@@ -13,7 +13,8 @@ require('./app.scss');
 const scope = {
   React,
   ...lodash,
-  ...brc
+  ...brc,
+  ...RCDatepicker
 };
 
 @props({

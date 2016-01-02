@@ -21,6 +21,16 @@
           "react-components/master/examples/components/flex/Column.example",
           "react-components/master/examples/components/flex/Row.example"
         ]
+      },
+      {
+        "id": "rc-datepicker",
+        "title": "Datepicker",
+        "desc": "A decent and pretty date picker to be used with React",
+        "url": "https://github.com/buildo/rc-datepicker",
+        "examples": [
+          "rc-datepicker/master/examples/DatePickerInput.example",
+          "rc-datepicker/master/examples/DatePicker.example"
+        ]
       }
     ]
   },
