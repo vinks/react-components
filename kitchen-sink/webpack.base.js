@@ -16,7 +16,7 @@ module.exports = {
         test: /\.jsx?$/,
         loader: 'babel?stage=0&loose',
         exclude: [ paths.ASSETS ],
-        include: [ paths.COMPONENTS, paths.SRC, /rc-datepicker/, /react-input-link/ ]
+        include: [ paths.COMPONENTS, paths.SRC, /rc-datepicker/, /react-input-link/, /react-autosize-textarea/ ]
       }
     ],
     preLoaders: [

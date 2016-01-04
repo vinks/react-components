@@ -43,6 +43,17 @@
           "react-input-link/master/examples/Button.example",
           "react-input-link/master/examples/Anything.example"
         ]
+      },
+      {
+        "id": "react-autosize-textarea",
+        "title": "TextareaAutosize",
+        "desc": "A textarea perfectly compatible with ReactJS default one which auto resizes its height based on user input.",
+        "url": "https://github.com/buildo/react-autosize-textarea",
+        "examples": [
+          "react-autosize-textarea/master/examples/Empty.example",
+          "react-autosize-textarea/master/examples/MinimumHeight.example",
+          "react-autosize-textarea/master/examples/Prefilled.example"
+        ]
       }
     ]
   },

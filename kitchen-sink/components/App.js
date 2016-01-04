@@ -7,6 +7,7 @@ import KitchenSink from '../../src/kitchen-sink';
 import * as brc from '../../src';
 import * as RCDatepicker from 'rc-datepicker/src';
 import InputLink from 'react-input-link/src';
+import TextareaAutosize from 'react-autosize-textarea/src';
 import components from 'raw!../components.json';
 
 require('./app.scss');
@@ -16,7 +17,8 @@ const scope = {
   ...lodash,
   ...brc,
   ...RCDatepicker,
-  InputLink
+  InputLink,
+  TextareaAutosize
 };
 
 @props({
