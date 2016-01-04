@@ -54,6 +54,15 @@
           "react-autosize-textarea/master/examples/MinimumHeight.example",
           "react-autosize-textarea/master/examples/Prefilled.example"
         ]
+      },
+      {
+        "id": "react-cookie-banner",
+        "title": "CookieBanner",
+        "desc": "React Cookie banner which can be automatically dismissed with a scroll. Because fuck The Cookie Law, that's why.",
+        "url": "https://github.com/buildo/react-cookie-banner",
+        "examples": [
+          "react-cookie-banner/master/examples/Default.example"
+        ]
       }
     ]
   },

@@ -8,6 +8,7 @@ import * as brc from '../../src';
 import * as RCDatepicker from 'rc-datepicker/src';
 import InputLink from 'react-input-link/src';
 import TextareaAutosize from 'react-autosize-textarea/src';
+import { cookie, default as CookieBanner } from 'react-cookie-banner/src';
 import components from 'raw!../components.json';
 
 require('./app.scss');
@@ -18,7 +19,8 @@ const scope = {
   ...brc,
   ...RCDatepicker,
   InputLink,
-  TextareaAutosize
+  TextareaAutosize,
+  cookie, CookieBanner
 };
 
 @props({
@@ -52,7 +54,8 @@ export default class App extends React.Component {
           const sections = res.data;
           this.setState(
             { sections },
-            () => this.loadComponent(componentId))
+            () => this.loadComponent(componentId)
+          );
         });
     }
   }
