@@ -4,6 +4,16 @@
     "id": "section-1",
     "components": [
       {
+        "id": "divider",
+        "title": "Divider",
+        "desc": "Divider",
+        "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Divider",
+        "examples": [
+          "revenge-react-components/master/examples/src/Divider/default.example",
+          "revenge-react-components/master/examples/src/Divider/horizontal.example"
+        ]
+      },
+      {
         "id": "background-dimmer",
         "title": "Background dimmer",
         "desc": "background dimmer",

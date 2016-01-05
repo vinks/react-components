@@ -22,7 +22,8 @@ module.exports = {
           /rc-datepicker/,
           /react-input-link/,
           /react-autosize-textarea/,
-          /react-cookie-banner/
+          /react-cookie-banner/,
+          /revenge-react-components/
         ]
       }
     ],

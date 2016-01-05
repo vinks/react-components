@@ -5,6 +5,7 @@ import { find } from 'lodash';
 import { props, t } from 'revenge';
 import KitchenSink from '../../src/kitchen-sink';
 import * as brc from '../../src';
+import Divider from 'revenge-react-components/src/Divider';
 import * as RCDatepicker from 'rc-datepicker/src';
 import InputLink from 'react-input-link/src';
 import TextareaAutosize from 'react-autosize-textarea/src';
@@ -20,7 +21,8 @@ const scope = {
   ...RCDatepicker,
   InputLink,
   TextareaAutosize,
-  cookie, CookieBanner
+  cookie, CookieBanner,
+  Divider
 };
 
 @props({
