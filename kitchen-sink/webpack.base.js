@@ -15,7 +15,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel?stage=0&loose',
-        exclude: [ paths.ASSETS ],
+        exclude: [ paths.ASSETS, /node_modules\/babel-core/ ],
         include: [
           paths.COMPONENTS,
           paths.SRC,

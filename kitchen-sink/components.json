@@ -9,8 +9,18 @@
         "desc": "Divider",
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Divider",
         "examples": [
-          "revenge-react-components/master/examples/src/Divider/default.example",
-          "revenge-react-components/master/examples/src/Divider/horizontal.example"
+          "revenge-react-components/55-add_examples_for_buildo/examples/src/Divider/default.example",
+          "revenge-react-components/55-add_examples_for_buildo/examples/src/Divider/horizontal.example",
+          "revenge-react-components/55-add_examples_for_buildo/examples/src/DropdownMenu/default.example"
+        ]
+      },
+      {
+        "id": "dropdown-menu",
+        "title": "DropdownMenu",
+        "desc": "DropdownMenu",
+        "url": "https://github.com/buildo/revenge-react-components/tree/master/src/DropdownMenu",
+        "examples": [
+          "revenge-react-components/55-add_examples_for_buildo/examples/src/DropdownMenu/default.example"
         ]
       },
       {

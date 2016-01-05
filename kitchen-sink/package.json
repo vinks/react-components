@@ -1,0 +1,74 @@
+{
+  "name": "showroom",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build",
+  "scripts": {
+    "build": "rm -rf ./build && webpack --config ./webpack.config.build.js --progress && cp ./build/index.html index.html",
+    "deploy": "git reset && npm run build-showroom && git add index.html && git add ./build && git commit -m 'deploy' && git push",
+    "lint": "eslint components",
+    "start": "rm -rf ./build && webpack-dev-server --config ./webpack.config.js --progress --hot --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:buildo/react-components"
+  },
+  "keywords": [
+    "react",
+    "showroom",
+    "buildo"
+  ],
+  "author": "Francesco Cioria <francescoiovanni@buildo.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buildo/react-components/issues"
+  },
+  "homepage": "https://github.com/buildo/react-components",
+  "dependencies": {
+    "axios": "^0.8.1",
+    "babel": "^5.8.12",
+    "babel-eslint": "^4.0.5",
+    "babel-loader": "^5.3.2",
+    "buildo-react-components": "../",
+    "component-playground": "^0.1.2",
+    "compression-webpack-plugin": "^0.2.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^1.9.0",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^3.8.0",
+    "expect": "^1.13.4",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "html-webpack-plugin": "^1.7.0",
+    "isparta-loader": "^2.0.0",
+    "karma": "^0.13.16",
+    "karma-bamboo-reporter": "^0.1.2",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.3",
+    "karma-mocha": "^0.2.1",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.3.4",
+    "node-libs-browser": "^0.5.3",
+    "node-sass": "^3.4.2",
+    "normalize-css": "^2.3.1",
+    "object-assign": "^4.0.1",
+    "raw-loader": "^0.5.1",
+    "rc-datepicker": "buildo/rc-datepicker",
+    "react": "^0.13.3 <0.14.0",
+    "react-autosize-textarea": "buildo/react-autosize-textarea",
+    "react-cookie-banner": "buildo/react-cookie-banner",
+    "react-input-link": "buildo/react-input-link",
+    "react-router-transition-context": "^0.13.3",
+    "react-sidebar": "^1.1.0",
+    "revenge": "^0.3.4",
+    "revenge-react-components": "buildo/revenge-react-components",
+    "require-dir": "^0.3.0",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "tcomb-react": "^0.8.9",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "devDependencies": {
+    "babel-plugin-tcomb": "^0.1.3"
+  }
+}
