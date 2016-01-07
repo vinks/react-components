@@ -9,8 +9,8 @@
         "desc": "Divider",
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Divider",
         "examples": [
-          "revenge-react-components/55-add_examples_for_buildo/examples/src/Divider/default.example",
-          "revenge-react-components/55-add_examples_for_buildo/examples/src/Divider/horizontal.example"
+          "revenge-react-components/master/examples/src/Divider/default.example",
+          "revenge-react-components/master/examples/src/Divider/horizontal.example"
         ]
       },
       {
@@ -19,7 +19,7 @@
         "desc": "DropdownMenu",
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/DropdownMenu",
         "examples": [
-          "revenge-react-components/55-add_examples_for_buildo/examples/src/DropdownMenu/default.example"
+          "revenge-react-components/master/examples/src/DropdownMenu/default.example"
         ]
       },
       {
@@ -28,8 +28,8 @@
         "desc": "Icon",
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Icon",
         "examples": [
-          "revenge-react-components/55-add_examples_for_buildo/examples/src/Icon/default.example",
-          "revenge-react-components/55-add_examples_for_buildo/examples/src/Icon/tooltipped.example"
+          "revenge-react-components/master/examples/src/Icon/default.example",
+          "revenge-react-components/master/examples/src/Icon/tooltipped.example"
         ]
       },
       {
@@ -38,9 +38,9 @@
         "desc": "Panel",
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Panel",
         "examples": [
-          "revenge-react-components/55-add_examples_for_buildo/examples/src/Panel/floating.example",
-          "revenge-react-components/55-add_examples_for_buildo/examples/src/Panel/docked.example",
-          "revenge-react-components/55-add_examples_for_buildo/examples/src/Panel/tabbed.example"
+          "revenge-react-components/master/examples/src/Panel/floating.example",
+          "revenge-react-components/master/examples/src/Panel/docked.example",
+          "revenge-react-components/master/examples/src/Panel/tabbed.example"
         ]
       },
       {
@@ -49,7 +49,7 @@
         "desc": "Tooltip",
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Tooltip",
         "examples": [
-          "revenge-react-components/55-add_examples_for_buildo/examples/src/Tooltip/default.example"
+          "revenge-react-components/master/examples/src/Tooltip/default.example"
         ]
       }
     ]
