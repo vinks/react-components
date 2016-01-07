@@ -1,7 +1,7 @@
 [
   {
-    "title": "Section 1",
-    "id": "section-1",
+    "title": "Section Revenge",
+    "id": "section-revenge",
     "components": [
       {
         "id": "divider",
@@ -10,8 +10,7 @@
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Divider",
         "examples": [
           "revenge-react-components/55-add_examples_for_buildo/examples/src/Divider/default.example",
-          "revenge-react-components/55-add_examples_for_buildo/examples/src/Divider/horizontal.example",
-          "revenge-react-components/55-add_examples_for_buildo/examples/src/DropdownMenu/default.example"
+          "revenge-react-components/55-add_examples_for_buildo/examples/src/Divider/horizontal.example"
         ]
       },
       {
@@ -24,24 +23,41 @@
         ]
       },
       {
-        "id": "background-dimmer",
-        "title": "Background dimmer",
-        "desc": "background dimmer",
-        "url": "https://github.com/buildo/react-components/tree/master/src/background-dimmer",
+        "id": "icon",
+        "title": "Icon",
+        "desc": "Icon",
+        "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Icon",
         "examples": [
-          "react-components/master/examples/components/BackgroundDimmer.example"
+          "revenge-react-components/55-add_examples_for_buildo/examples/src/Icon/default.example",
+          "revenge-react-components/55-add_examples_for_buildo/examples/src/Icon/tooltipped.example"
         ]
       },
       {
-        "id": "flex-view",
-        "title": "FlexView",
-        "desc": "FlexView",
-        "url": "https://github.com/buildo/react-components/tree/master/src/flex",
+        "id": "panel",
+        "title": "Panel",
+        "desc": "Panel",
+        "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Panel",
         "examples": [
-          "react-components/master/examples/components/flex/Column.example",
-          "react-components/master/examples/components/flex/Row.example"
+          "revenge-react-components/55-add_examples_for_buildo/examples/src/Panel/floating.example",
+          "revenge-react-components/55-add_examples_for_buildo/examples/src/Panel/docked.example",
+          "revenge-react-components/55-add_examples_for_buildo/examples/src/Panel/tabbed.example"
         ]
       },
+      {
+        "id": "tooltip",
+        "title": "Tooltip",
+        "desc": "Tooltip",
+        "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Tooltip",
+        "examples": [
+          "revenge-react-components/55-add_examples_for_buildo/examples/src/Tooltip/default.example"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Section Outside",
+    "id": "section-outside",
+    "components": [
       {
         "id": "rc-datepicker",
         "title": "Datepicker",
@@ -87,9 +103,28 @@
     ]
   },
   {
-    "title": "Section 2",
-    "id": "section-2",
+    "title": "Section Buildo",
+    "id": "section-buildo",
     "components": [
+      {
+        "id": "background-dimmer",
+        "title": "Background dimmer",
+        "desc": "background dimmer",
+        "url": "https://github.com/buildo/react-components/tree/master/src/background-dimmer",
+        "examples": [
+          "react-components/master/examples/components/BackgroundDimmer.example"
+        ]
+      },
+      {
+        "id": "flex-view",
+        "title": "FlexView",
+        "desc": "FlexView",
+        "url": "https://github.com/buildo/react-components/tree/master/src/flex",
+        "examples": [
+          "react-components/master/examples/components/flex/Column.example",
+          "react-components/master/examples/components/flex/Row.example"
+        ]
+      },
       {
         "id": "loading-spinner",
         "title": "LoadingSpinner",
