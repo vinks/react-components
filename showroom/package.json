@@ -4,8 +4,8 @@
   "description": "",
   "main": "build",
   "scripts": {
-    "build": "rm -rf ./build && webpack --config ./webpack.config.build.js --progress && cp ./build/index.html index.html",
-    "deploy": "git reset && npm run build-showroom && git add index.html && git add ./build && git commit -m 'deploy' && git push",
+    "build": "rm -rf ./build && webpack --config ./webpack.config.build.js --progress && cp ./build/index.html ../index.html",
+    "deploy": "git reset && npm run build && git add ../index.html && git add ./build && git commit -m 'deploy' && git push",
     "lint": "eslint components",
     "start": "rm -rf ./build && webpack-dev-server --config ./webpack.config.js --progress --hot --inline"
   },

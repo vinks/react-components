@@ -9,8 +9,6 @@
     "lint": "eslint src --fix",
     "preversion": "npm run lint && npm run test && npm run build-examples",
     "prepublish": "npm run build",
-    "build-showroom": "rm -rf kitchen-sink/build && webpack --config kitchen-sink/webpack.config.build.js --progress && cp kitchen-sink/build/index.html index.html",
-    "deploy-showroom": "git reset && npm run build-showroom && git add index.html && git add kitchen-sink/build && git commit -m 'deploy' && git push",
     "build-examples": "npm run clean && webpack --config examples/webpack.config.build.js --progress",
     "start": "npm run clean && webpack-dev-server --config examples/webpack.config.js --progress --hot --inline && cp examples/index.html examples/build/index.html",
     "showroom": "rm -rf kitchen-sink/build && webpack-dev-server --config kitchen-sink/webpack.config.js --progress --hot --inline",

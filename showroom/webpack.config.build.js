@@ -8,7 +8,7 @@ var assign = require('lodash/object').assign;
 var indexHtml = require('fs').readFileSync(path.resolve(__dirname, './index.html'), 'utf8');
 
 indexHtml = indexHtml.replace(/__GZIP__/g, '');
-indexHtml = indexHtml.replace(/__BUILD_PATH__/g, 'kitchen-sink/build/');
+indexHtml = indexHtml.replace(/__BUILD_PATH__/g, 'showroom/build/');
 
 var paths = {
   SRC: path.resolve(__dirname),

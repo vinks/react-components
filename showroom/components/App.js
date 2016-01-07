@@ -21,7 +21,7 @@ const scope = {
   ...rrc,
   ...RCDatepicker,
   InputLink,
-  TextareaAutosize,
+  TextareaAutosize
   // cookie, CookieBanner
 };
 
