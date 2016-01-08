@@ -78,6 +78,7 @@ export default class LiveDemo extends React.Component {
       <div className='live-demo'>
         <div className='component' ref='contentNode' />
         {iso && <div className='iso-demo component' ref='contentNodeISO' />}
+<<<<<<< a8bcfc1d16dd0899b555a35b9a5b311c5f0117b1
         {!showCode && <div className='show-code cm-s-monokai CodeMirror' onClick={toggleCode}>SHOW CODE</div>}
         <MoreOrLess expanded={showCode} onExpandedChange={toggleCode} icons={{ expanded: 'angle-up', collapsed: 'angle-down' }}>
           <div style={showCode ? undefined : { position: 'absolute', pointerEvents: 'none', opacity: 0, height: 10, zIndex: -1, overflow: 'hidden' }}>
@@ -86,6 +87,13 @@ export default class LiveDemo extends React.Component {
             }
           </div>
         </MoreOrLess>
+=======
+        {this.contentNode &&
+          <ScrollView scrollPropagation={false}>
+            <Playground codeText={codeText + footer} scope={{ ...scope, __render }} es6Console />
+          </ScrollView>
+        }
+>>>>>>> minor style improvements
       </div>
     );
   }
