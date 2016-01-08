@@ -35,7 +35,7 @@ export default class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.axios = _axios.create({ baseURL: 'https://raw.githubusercontent.com/buildo/' });
+    this.axios = _axios.create({ baseURL: 'https://cdn.rawgit.com/buildo' });
     this.state = {};
   }
 
