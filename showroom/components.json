@@ -68,7 +68,7 @@
         "title": "Datepicker",
         "desc": "A decent and pretty date picker to be used with React",
         "url": "https://github.com/buildo/rc-datepicker",
-        "component": "rc-datepicker/master/src/DatePickerInput",
+        "component": "rc-datepicker/master/src/DatePickerInput.js",
         "examples": [
           "rc-datepicker/master/examples/DatePickerInput.example",
           "rc-datepicker/master/examples/DatePicker.example"
