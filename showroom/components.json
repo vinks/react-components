@@ -7,54 +7,54 @@
         "id": "divider",
         "title": "Divider",
         "desc": "Divider",
-        "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Divider",
-        "component": "revenge-react-components/master/src/Divider/Divider.js",
+        "url": "https://github.com/buildo/react-components/tree/master/src/Divider",
+        "component": "react-components/master/src/Divider/Divider.js",
         "examples": [
-          "revenge-react-components/master/examples/src/Divider/default.example",
-          "revenge-react-components/master/examples/src/Divider/horizontal.example"
+          "react-components/master/examples/components/Divider/default.example",
+          "react-components/master/examples/components/Divider/horizontal.example"
         ]
       },
       {
         "id": "dropdown-menu",
         "title": "DropdownMenu",
         "desc": "DropdownMenu",
-        "url": "https://github.com/buildo/revenge-react-components/tree/master/src/DropdownMenu",
-        "component": "revenge-react-components/master/src/DropdownMenu/DropdownMenu.js",
+        "url": "https://github.com/buildo/react-components/tree/master/src/DropdownMenu",
+        "component": "react-components/master/src/DropdownMenu/DropdownMenu.js",
         "examples": [
-          "revenge-react-components/master/examples/src/DropdownMenu/default.example"
+          "react-components/master/examples/components/DropdownMenu/default.example"
         ]
       },
       {
         "id": "icon",
         "title": "Icon",
         "desc": "Icon",
-        "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Icon",
-        "component": "revenge-react-components/master/src/Icon/Icon.js",
+        "url": "https://github.com/buildo/react-components/tree/master/src/Icon",
+        "component": "react-components/master/src/Icon/Icon.js",
         "examples": [
-          "revenge-react-components/master/examples/src/Icon/default.example",
-          "revenge-react-components/master/examples/src/Icon/tooltipped.example"
+          "react-components/master/examples/components/Icon/default.example",
+          "react-components/master/examples/components/Icon/tooltipped.example"
         ]
       },
       {
         "id": "panel",
         "title": "Panel",
         "desc": "Panel",
-        "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Panel",
-        "component": "revenge-react-components/master/src/Panel/Panel.js",
+        "url": "https://github.com/buildo/react-components/tree/master/src/Panel",
+        "component": "react-components/master/src/Panel/Panel.js",
         "examples": [
-          "revenge-react-components/master/examples/src/Panel/floating.example",
-          "revenge-react-components/master/examples/src/Panel/docked.example",
-          "revenge-react-components/master/examples/src/Panel/tabbed.example"
+          "react-components/master/examples/components/Panel/floating.example",
+          "react-components/master/examples/components/Panel/docked.example",
+          "react-components/master/examples/components/Panel/tabbed.example"
         ]
       },
       {
         "id": "tooltip",
         "title": "Tooltip",
         "desc": "Tooltip",
-        "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Tooltip",
-        "component": "revenge-react-components/master/src/Tooltip/Tooltip.js",
+        "url": "https://github.com/buildo/react-components/tree/master/src/Tooltip",
+        "component": "react-components/master/src/Tooltip/Tooltip.js",
         "examples": [
-          "revenge-react-components/master/examples/src/Tooltip/default.example"
+          "react-components/master/examples/components/Tooltip/default.example"
         ]
       }
     ]
