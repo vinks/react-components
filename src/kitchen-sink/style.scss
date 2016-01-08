@@ -108,6 +108,23 @@
         }
       }
     }
+
+    > .footer {
+      margin: 30px 50px;
+
+      table {
+        tr {
+          height: 30px;
+        }
+        thead th {
+          padding: 0 5px;
+          text-align: left;
+        }
+        tbody td {
+          padding: 0 5px;
+        }
+      }
+    }
   }
 
   .sidebar {
