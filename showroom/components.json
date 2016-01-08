@@ -170,8 +170,8 @@
         "id": "scroll-view",
         "title": "ScrollView",
         "desc": "ScrollView",
-        "url": "https://github.com/buildo/react-components/tree/master/src/scroll-view",
-        "component": "react-components/master/src/scroll-view/ScrollView.js",
+        "url": "https://github.com/buildo/react-components/tree/master/src/scroll",
+        "component": "react-components/master/src/scroll/ScrollView.js",
         "examples": [
           "react-components/master/examples/components/scroll/StopPropagation.example",
           "react-components/master/examples/components/scroll/ScrollTo.example"
