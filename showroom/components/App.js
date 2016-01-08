@@ -1,5 +1,8 @@
 import React from 'react';
+import { parse } from 'react-docgen';
 import _axios from 'axios';
+import Markdown from 'react-remarkable';
+import generateMarkdown from '../../generateReadmes/generateMarkdown';
 import lodash from 'lodash';
 import { find } from 'lodash';
 import { props, t } from 'revenge';
@@ -62,11 +65,18 @@ export default class App extends React.Component {
 
   loadComponent = (id) => {
     if (id) {
-      const component = this.state.sections.reduce((acc, s) => acc || find(s.components, { id }), null) || {};
-      _axios.all(component.examples.map(e => this.axios.get(e)))
+      const componentInfo = this.state.sections.reduce((acc, s) => acc || find(s.components, { id }), null) || {};
+
+      const componentLink = this.axios.get(componentInfo.component);
+      const examplesLinks = componentInfo.examples.map(e => this.axios.get(e));
+      _axios.all([componentLink].concat(examplesLinks))
         .then(res => {
-          const examples = res.map(r => r.data);
-          this.setState({ componentId: id, examples });
+          const component = parse(res[0].data);
+          const markdown = generateMarkdown(componentInfo.title, component);
+          const header = <Markdown source={markdown.split('Props')[0]} options={{ html: true }}/>;
+        const footer = <Markdown source={'Props\n' + markdown.split('Props')[1]} options={{ html: true }}/>;
+          const examples = res.slice(1).map(r => r.data);
+          this.setState({ componentId: id, examples, header, footer });
         });
     }
   }
@@ -82,7 +92,7 @@ export default class App extends React.Component {
 
   render() {
     const {
-      state: { componentId },
+      state: { componentId, header, footer },
       onSelectItem
     } = this;
     const sections = this.getSections();
@@ -93,7 +103,7 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <KitchenSink {...{ sections, componentId, onSelectItem, scope }} />
+        <KitchenSink {...{ sections, componentId, onSelectItem, scope, header, footer }} />
       </div>
     );
   }

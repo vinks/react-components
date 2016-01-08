@@ -8,6 +8,7 @@
         "title": "Divider",
         "desc": "Divider",
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Divider",
+        "component": "revenge-react-components/master/src/Divider/Divider.js",
         "examples": [
           "revenge-react-components/master/examples/src/Divider/default.example",
           "revenge-react-components/master/examples/src/Divider/horizontal.example"
@@ -18,6 +19,7 @@
         "title": "DropdownMenu",
         "desc": "DropdownMenu",
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/DropdownMenu",
+        "component": "revenge-react-components/master/src/DropdownMenu/DropdownMenu.js",
         "examples": [
           "revenge-react-components/master/examples/src/DropdownMenu/default.example"
         ]
@@ -27,6 +29,7 @@
         "title": "Icon",
         "desc": "Icon",
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Icon",
+        "component": "revenge-react-components/master/src/Icon/Icon.js",
         "examples": [
           "revenge-react-components/master/examples/src/Icon/default.example",
           "revenge-react-components/master/examples/src/Icon/tooltipped.example"
@@ -37,6 +40,7 @@
         "title": "Panel",
         "desc": "Panel",
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Panel",
+        "component": "revenge-react-components/master/src/Panel/Panel.js",
         "examples": [
           "revenge-react-components/master/examples/src/Panel/floating.example",
           "revenge-react-components/master/examples/src/Panel/docked.example",
@@ -48,6 +52,7 @@
         "title": "Tooltip",
         "desc": "Tooltip",
         "url": "https://github.com/buildo/revenge-react-components/tree/master/src/Tooltip",
+        "component": "revenge-react-components/master/src/Tooltip/Tooltip.js",
         "examples": [
           "revenge-react-components/master/examples/src/Tooltip/default.example"
         ]
@@ -63,6 +68,7 @@
         "title": "Datepicker",
         "desc": "A decent and pretty date picker to be used with React",
         "url": "https://github.com/buildo/rc-datepicker",
+        "component": "rc-datepicker/master/src/DatePickerInput",
         "examples": [
           "rc-datepicker/master/examples/DatePickerInput.example",
           "rc-datepicker/master/examples/DatePicker.example"
@@ -73,6 +79,7 @@
         "title": "InputLink",
         "desc": "ReactInputLink is a replacement for the base input react component capable of rendering a child (link, button...) inside the input itself. It supports the same props of react input.",
         "url": "https://github.com/buildo/react-input-link",
+        "component": "react-input-link/master/src/InputLink.js",
         "examples": [
           "react-input-link/master/examples/PlainText.example",
           "react-input-link/master/examples/Password.example",
@@ -85,6 +92,7 @@
         "title": "TextareaAutosize",
         "desc": "A textarea perfectly compatible with ReactJS default one which auto resizes its height based on user input.",
         "url": "https://github.com/buildo/react-autosize-textarea",
+        "component": "react-autosize-textarea/master/src/TextareaAutosize.js",
         "examples": [
           "react-autosize-textarea/master/examples/Empty.example",
           "react-autosize-textarea/master/examples/MinimumHeight.example",
@@ -96,6 +104,7 @@
         "title": "CookieBanner",
         "desc": "React Cookie banner which can be automatically dismissed with a scroll. Because fuck The Cookie Law, that's why.",
         "url": "https://github.com/buildo/react-cookie-banner",
+        "component": "react-cookie-banner/master/src/CookieBanner.js",
         "examples": [
           "react-cookie-banner/master/examples/Default.example"
         ]
@@ -111,6 +120,7 @@
         "title": "Background dimmer",
         "desc": "background dimmer",
         "url": "https://github.com/buildo/react-components/tree/master/src/background-dimmer",
+        "component": "react-components/master/src/background-dimmer/BackgroundDimmer.js",
         "examples": [
           "react-components/master/examples/components/BackgroundDimmer.example"
         ]
@@ -120,6 +130,7 @@
         "title": "FlexView",
         "desc": "FlexView",
         "url": "https://github.com/buildo/react-components/tree/master/src/flex",
+        "component": "react-components/master/src/flex/FlexView.js",
         "examples": [
           "react-components/master/examples/components/flex/Column.example",
           "react-components/master/examples/components/flex/Row.example"
@@ -130,6 +141,7 @@
         "title": "LoadingSpinner",
         "desc": "LoadingSpinner",
         "url": "https://github.com/buildo/react-components/tree/master/src/loading-spinner",
+        "component": "react-components/master/src/loading-spinner/LoadingSpinner.js",
         "examples": [
           "react-components/master/examples/components/LoadingSpinner.example"
         ]
@@ -139,6 +151,7 @@
         "title": "ModalManager",
         "desc": "ModalManager",
         "url": "https://github.com/buildo/react-components/tree/master/src/modal-manager",
+        "component": "react-components/master/src/modal-manager/ModalManager.js",
         "examples": [
           "react-components/master/examples/components/ModalManager.example"
         ]
@@ -148,6 +161,7 @@
         "title": "MobileDetector",
         "desc": "MobileDetector",
         "url": "https://github.com/buildo/react-components/tree/master/src/mobile-detector",
+        "component": "react-components/master/src/mobile-detector/MobileDetector.js",
         "examples": [
           "react-components/master/examples/components/MobileDetector.example"
         ]
@@ -157,6 +171,7 @@
         "title": "ScrollView",
         "desc": "ScrollView",
         "url": "https://github.com/buildo/react-components/tree/master/src/scroll-view",
+        "component": "react-components/master/src/scroll-view/ScrollView.js",
         "examples": [
           "react-components/master/examples/components/scroll/StopPropagation.example",
           "react-components/master/examples/components/scroll/ScrollTo.example"
@@ -167,6 +182,7 @@
         "title": "TextOverflow",
         "desc": "TextOverflow",
         "url": "https://github.com/buildo/react-components/tree/master/src/text-overflow",
+        "component": "react-components/master/src/text-overflow/TextOverflow.js",
         "examples": [
           "react-components/master/examples/components/text-overflow/Default.example",
           "react-components/master/examples/components/text-overflow/CustomPopover.example",
@@ -178,6 +194,7 @@
         "title": "Popover",
         "desc": "Popover",
         "url": "https://github.com/buildo/react-components/tree/master/src/popover",
+        "component": "react-components/master/src/popover/Popover.js",
         "examples": [
           "react-components/master/examples/components/popover/Relative.example",
           "react-components/master/examples/components/popover/Absolute.example"
@@ -188,6 +205,7 @@
         "title": "Toaster",
         "desc": "Toaster",
         "url": "https://github.com/buildo/react-components/tree/master/src/toaster",
+        "component": "react-components/master/src/toaster/Toaster.js",
         "examples": [
           "react-components/master/examples/components/toaster/Inline.example",
           "react-components/master/examples/components/toaster/Attached.example"
