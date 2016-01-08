@@ -3,13 +3,12 @@ import _axios from 'axios';
 import lodash from 'lodash';
 import { find } from 'lodash';
 import { props, t } from 'revenge';
-import KitchenSink from 'buildo-react-components/src/kitchen-sink';
-import * as brc from 'buildo-react-components/src';
-import * as rrc from 'revenge-react-components/src';
+import KitchenSink from '../../src/kitchen-sink';
+import * as brc from '../../src';
 import * as RCDatepicker from 'rc-datepicker/src';
 import InputLink from 'react-input-link/src';
 import TextareaAutosize from 'react-autosize-textarea/src';
-// import { cookie, default as CookieBanner } from 'react-cookie-banner/src';
+import { cookie, default as CookieBanner } from 'react-cookie-banner/src';
 import components from 'raw!../components.json';
 
 require('./app.scss');
@@ -18,11 +17,10 @@ const scope = {
   React,
   ...lodash,
   ...brc,
-  ...rrc,
   ...RCDatepicker,
   InputLink,
-  TextareaAutosize
-  // cookie, CookieBanner
+  TextareaAutosize,
+  cookie, CookieBanner
 };
 
 @props({
