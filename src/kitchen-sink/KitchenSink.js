@@ -14,12 +14,19 @@ export default class KitchenSink extends React.Component {
     openSections: React.PropTypes.array,
     components: React.PropTypes.array,
     onSelectItem: React.PropTypes.func.isRequired,
+<<<<<<< 0bb8d30883ebffc86e98419f48b6a6995b84a2ce
     onToggleSection: React.PropTypes.func.isRequired,
     scope: React.PropTypes.object,
     iso: React.PropTypes.bool,
     header: React.PropTypes.node,
     footer: React.PropTypes.node,
     loading: React.PropTypes.bool
+=======
+    scope: React.PropTypes.object.isRequired,
+    iso: React.PropTypes.bool,
+    header: React.PropTypes.node,
+    footer: React.PropTypes.node
+>>>>>>> add header and footer to KitchenSink
   }
 
   static defaultProps = {
@@ -44,9 +51,15 @@ export default class KitchenSink extends React.Component {
         scope,
         iso,
         header,
+<<<<<<< 0bb8d30883ebffc86e98419f48b6a6995b84a2ce
         footer,
         loading
       }
+=======
+        footer
+      },
+      state: { component }
+>>>>>>> add header and footer to KitchenSink
     } = this;
 
     const children = componentId ?
@@ -56,8 +69,13 @@ export default class KitchenSink extends React.Component {
 
     return (
       <div className='kitchen-sink'>
+<<<<<<< 0bb8d30883ebffc86e98419f48b6a6995b84a2ce
         <Sidebar {...{ sections, openSections, onToggleSection, componentId, contentId, onSelectItem, loading }} >
           {!loading && children}
+=======
+        <Sidebar {...{ sections, components, componentId, onSelectItem }} >
+          <Content {...{ component, scope, iso, header, footer }} />
+>>>>>>> add header and footer to KitchenSink
         </Sidebar>
       </div>
     );
