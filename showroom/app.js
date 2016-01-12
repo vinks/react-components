@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, create } from 'react-router-transition-context';
+import patchReactRouter from './patch-react-router';
 import App from './components/App';
 import Section from './components/Section';
 import Content from './components/Content';
@@ -21,7 +22,7 @@ const routes = (
   </Route>
 );
 
-const router = create({ routes });
+const router = patchReactRouter(create({ routes }));
 
 router.run((Handler, { params, query }) => {
   // RENDERS

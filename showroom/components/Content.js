@@ -9,7 +9,9 @@ import KitchenSink from '../../src/kitchen-sink';
   query: t.Object,
   params: t.Object,
   sections: t.Array,
+  openSections: t.Array,
   section: t.Object,
+  onToggleSection: t.Function,
   scope: t.Object,
   onSelectItem: t.Function
 })
@@ -40,10 +42,15 @@ export default class Content extends React.Component {
 
   render() {
     const { sections: mappedSections = this.props.sections, loading } = this.state;
-    const { params: { sectionId, contentId }, onSelectItem, scope, sections: propSections } = this.props;
+    const {
+      params: { sectionId, contentId },
+      onSelectItem,
+      openSections, onToggleSection,
+      sections: propSections
+    } = this.props;
     const sections = mappedSections || propSections;
 
-    return <KitchenSink {...{ sections, sectionId, contentId, onSelectItem, scope }} />;
+    return <KitchenSink {...{ sections, openSections, sectionId, onToggleSection, contentId, onSelectItem }} />;
   }
 
   componentWillReceiveProps(nextProps) {

@@ -9,6 +9,8 @@ import Component from './Component';
   query: t.Object,
   params: t.Object,
   sections: t.Array,
+  openSections: t.Array,
+  onToggleSection: t.Function,
   scope: t.Object,
   onSelectItem: t.Function
 })
@@ -18,7 +20,7 @@ export default class Section extends React.Component {
     const { params: { sectionId }, sections } = this.props;
     const section = find(sections, { id: sectionId });
     const Children = section.contents ? Content : Component;
-    console.log(Children);
+
     return <Children {...this.props} section={section} />;
   }
 

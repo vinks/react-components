@@ -58,23 +58,39 @@ export default class App extends React.Component {
     const section = find(this.state.sections, { id: sectionId });
     const route = section.components ? 'component' : 'content';
     const param = route + 'Id';
-    this.props.router.transitionTo(route, { sectionId, [param]: id });
+    this.props.transitionToPatch(route, { sectionId, [param]: id });
+  }
+
+  onToggleSection = (sectionId) => {
+    const { query: { openSections: querySections }, router } = this.props;
+    const openSections = (querySections || '').split(';');
+    if (openSections.indexOf(sectionId) === -1) {
+      router.transitionToPatch(null, null, { openSections: openSections.concat(sectionId).join(';') });
+    } else {
+      router.transitionToPatch(null, null, { openSections: openSections.filter(s => s !== sectionId).join(';') });
+    }
   }
 
   render() {
-    const { state: { sections }, onSelectItem } = this;
+    const {
+      state: { sections },
+      props: { query: { openSections: querySections } },
+      onToggleSection, onSelectItem
+    } = this;
     if (!sections) {
       return null;
     }
+
+    const openSections = (querySections || '').split(';');
 
     return (
       <div>
         <div className='kitchen-sink'>
           <div className='sidebar'>
-            <ReactSidebar docked sidebar={<SidebarContent {...{ sections, onSelectItem }} />} transitions={false} />
+            <ReactSidebar docked sidebar={<SidebarContent {...{ sections, onToggleSection, openSections, onSelectItem }} />} transitions={false} />
           </div>
         </div>
-        <RouteHandler {...{ ...this.props, sections, onSelectItem, scope }} />
+        <RouteHandler {...{ ...this.props, sections, openSections, onToggleSection, onSelectItem, scope }} />
       </div>
     );
   }
