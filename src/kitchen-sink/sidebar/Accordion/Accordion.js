@@ -27,6 +27,7 @@ export default class Accordion extends React.Component {
 
   constructor(props) {
     super(props);
+<<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
 <<<<<<< 392de274684b69f40edfe884a5e87555dbcaf006
     this.state = { isOpen: true };
   }
@@ -45,6 +46,9 @@ export default class Accordion extends React.Component {
     const showContent = typeof isOpen !== 'undefined' ? isOpen : this.state.isOpen;
 =======
     this.state = { isOpen: false };
+=======
+    this.state = { isOpen: true };
+>>>>>>> refactor KitchenSink to show plain markdown sections too
   }
 
   toggleOpen = () => this.setState({ isOpen: !this.state.isOpen })

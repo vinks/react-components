@@ -10,6 +10,7 @@ export default class Content extends React.Component {
   }
 
   render() {
+<<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
 <<<<<<< 0bb8d30883ebffc86e98419f48b6a6995b84a2ce
     return (
       <div className='content'>
@@ -29,6 +30,12 @@ export default class Content extends React.Component {
         <div className='footer'>
           {footer}
 >>>>>>> add header and footer to KitchenSink
+=======
+    return (
+      <div className='content'>
+        <div className='body'>
+          <Markdown source={this.props.content.content} options={{ html: true }} />
+>>>>>>> refactor KitchenSink to show plain markdown sections too
         </div>
       </div>
     );

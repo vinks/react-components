@@ -10,8 +10,12 @@ export default class KitchenSink extends React.Component {
     componentId: React.PropTypes.string,
     contentId: React.PropTypes.string,
     sectionId: React.PropTypes.string,
+<<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
     sections: React.PropTypes.array.isRequired,
     openSections: React.PropTypes.array,
+=======
+    sections: React.PropTypes.array,
+>>>>>>> refactor KitchenSink to show plain markdown sections too
     components: React.PropTypes.array,
     onSelectItem: React.PropTypes.func.isRequired,
 <<<<<<< 0bb8d30883ebffc86e98419f48b6a6995b84a2ce
@@ -25,6 +29,7 @@ export default class KitchenSink extends React.Component {
     scope: React.PropTypes.object.isRequired,
     iso: React.PropTypes.bool,
     header: React.PropTypes.node,
+<<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
     footer: React.PropTypes.node
 >>>>>>> add header and footer to KitchenSink
   }
@@ -34,6 +39,13 @@ export default class KitchenSink extends React.Component {
   }
 
   findSection = () => find(this.props.sections, { id: this.props.sectionId }) || {}
+=======
+    footer: React.PropTypes.node,
+    loading: React.PropTypes.bool
+  }
+
+  findSection = () => find(this.props.sections, { id: this.props.sectionId })
+>>>>>>> refactor KitchenSink to show plain markdown sections too
 
   findComponent = () => find(this.findSection().components, { id: this.props.componentId })
 
@@ -45,12 +57,16 @@ export default class KitchenSink extends React.Component {
         componentId,
         contentId,
         sections,
+<<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
         openSections,
+=======
+>>>>>>> refactor KitchenSink to show plain markdown sections too
         onSelectItem,
         onToggleSection,
         scope,
         iso,
         header,
+<<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
 <<<<<<< 0bb8d30883ebffc86e98419f48b6a6995b84a2ce
         footer,
         loading
@@ -60,6 +76,11 @@ export default class KitchenSink extends React.Component {
       },
       state: { component }
 >>>>>>> add header and footer to KitchenSink
+=======
+        footer,
+        loading
+      }
+>>>>>>> refactor KitchenSink to show plain markdown sections too
     } = this;
 
     const children = componentId ?
@@ -69,6 +90,7 @@ export default class KitchenSink extends React.Component {
 
     return (
       <div className='kitchen-sink'>
+<<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
 <<<<<<< 0bb8d30883ebffc86e98419f48b6a6995b84a2ce
         <Sidebar {...{ sections, openSections, onToggleSection, componentId, contentId, onSelectItem, loading }} >
           {!loading && children}
@@ -76,6 +98,10 @@ export default class KitchenSink extends React.Component {
         <Sidebar {...{ sections, components, componentId, onSelectItem }} >
           <Content {...{ component, scope, iso, header, footer }} />
 >>>>>>> add header and footer to KitchenSink
+=======
+        <Sidebar {...{ sections, componentId, contentId, onSelectItem, loading }} >
+          {children}
+>>>>>>> refactor KitchenSink to show plain markdown sections too
         </Sidebar>
       </div>
     );
