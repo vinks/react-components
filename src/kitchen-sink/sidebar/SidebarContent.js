@@ -23,10 +23,15 @@ export default class SidebarContent extends React.Component {
       <Item {...item} id={id} onClick={onSelectItem} sectionId={sectionId} indent active={this.isActive(id)} key={id} />
     );
 
+<<<<<<< 392de274684b69f40edfe884a5e87555dbcaf006
     const getSections = (sections) => sections.map(({ id, components, contents, title }) =>
       <Accordion onToggle={this.onToggle(id)} isOpen={this.isOpen(id)} title={title} key={id}>
         {getItems(id, components || contents)}
       </Accordion>);
+=======
+    const getSections = (sections) => sections.map(({ id, components, title }) =>
+      <Accordion title={title} key={id}>{getItems(id, components)}</Accordion>)
+>>>>>>> kitchen-sink sections should be accordions
 
     return (
       <div className='sidebar-content'>
