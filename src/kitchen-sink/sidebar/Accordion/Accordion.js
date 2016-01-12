@@ -12,7 +12,10 @@ export default class Accordion extends React.Component {
 
   static propTypes = {
     children: React.PropTypes.node.isRequired,
+<<<<<<< 00c4ba345bf788190fa67bf64c63e9848d183a3b
 <<<<<<< 392de274684b69f40edfe884a5e87555dbcaf006
+=======
+>>>>>>> add sectionsOpen and onToggleSections to KitchenSink
     title: React.PropTypes.string,
     isOpen: React.PropTypes.bool,
     onToggle: React.PropTypes.func
@@ -20,9 +23,12 @@ export default class Accordion extends React.Component {
 
   static defaultProps = {
     onToggle: () => {}
+<<<<<<< 00c4ba345bf788190fa67bf64c63e9848d183a3b
 =======
     title: React.PropTypes.string
 >>>>>>> kitchen-sink sections should be accordions
+=======
+>>>>>>> add sectionsOpen and onToggleSections to KitchenSink
   }
 
   constructor(props) {
@@ -51,12 +57,24 @@ export default class Accordion extends React.Component {
 >>>>>>> refactor KitchenSink to show plain markdown sections too
   }
 
-  toggleOpen = () => this.setState({ isOpen: !this.state.isOpen })
+  toggleOpen = () => {
+    const { onToggle } = this.props;
+    if (onToggle) {
+      onToggle();
+    } else {
+      this.setState({ isOpen: !this.state.isOpen });
+    }
+  }
 
   render() {
+<<<<<<< 00c4ba345bf788190fa67bf64c63e9848d183a3b
     const { children, title } = this.props;
 
 >>>>>>> kitchen-sink sections should be accordions
+=======
+    const { children, title, isOpen } = this.props;
+    const showContent = typeof isOpen !== 'undefined' ? isOpen : this.state.isOpen;
+>>>>>>> add sectionsOpen and onToggleSections to KitchenSink
     return (
       <div className='accordion'>
         <FlexView className='header' onClick={this.toggleOpen}>
@@ -71,8 +89,12 @@ export default class Accordion extends React.Component {
             <Icon icon='user' />
           </FlexView>
         </FlexView>
+<<<<<<< 00c4ba345bf788190fa67bf64c63e9848d183a3b
         {this.state.isOpen &&
 >>>>>>> kitchen-sink sections should be accordions
+=======
+        {showContent &&
+>>>>>>> add sectionsOpen and onToggleSections to KitchenSink
           <div className='content'>
             {children}
           </div>
