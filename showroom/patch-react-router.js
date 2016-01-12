@@ -2,7 +2,7 @@ import omit from 'lodash/object/omit';
 import find from 'lodash/collection/find';
 
 const lastRouteName = function(routes = []) {
-  return find(routes.map(r => r.name).reverse(), rn => !!rn);
+  return find(routes.map(r => r.name || r.path).reverse(), rn => !!rn);
 };
 
 export default function patchReactRouter(router) {
