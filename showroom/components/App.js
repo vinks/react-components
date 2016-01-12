@@ -58,7 +58,7 @@ export default class App extends React.Component {
     const section = find(this.state.sections, { id: sectionId });
     const route = section.components ? 'component' : 'content';
     const param = route + 'Id';
-    this.props.transitionToPatch(route, { sectionId, [param]: id });
+    this.props.router.transitionToPatch(route, { sectionId, [param]: id });
   }
 
   onToggleSection = (sectionId) => {
