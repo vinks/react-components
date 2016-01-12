@@ -96,7 +96,7 @@ function generateMarkdown(name, reactAPI) {
   var markdownString =
     generateTitle(name) + '\n' +
     generateDesciption(reactAPI.description) + '\n' +
-    generateProps(reactAPI.props);
+    generateProps(reactAPI.props || {});
 
   return markdownString;
 }

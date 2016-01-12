@@ -1,7 +1,18 @@
 [
   {
-    "title": "Section Revenge",
-    "id": "section-revenge",
+    "title": "Guides",
+    "id": "guides",
+    "contents": [
+      {
+        "id": "content-1",
+        "title": "Content 1",
+        "content": "react-components/152-add_documentation_to_buildo/src/loading-spinner/README.md"
+      }
+    ]
+  },
+  {
+    "title": "Components",
+    "id": "components",
     "components": [
       {
         "id": "divider",
@@ -56,13 +67,7 @@
         "examples": [
           "react-components/master/examples/components/Tooltip/default.example"
         ]
-      }
-    ]
-  },
-  {
-    "title": "Section Outside",
-    "id": "section-outside",
-    "components": [
+      },
       {
         "id": "rc-datepicker",
         "title": "Datepicker",
@@ -108,13 +113,7 @@
         "examples": [
           "react-cookie-banner/master/examples/Default.example"
         ]
-      }
-    ]
-  },
-  {
-    "title": "Section Buildo",
-    "id": "section-buildo",
-    "components": [
+      },
       {
         "id": "background-dimmer",
         "title": "Background dimmer",
