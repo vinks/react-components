@@ -1,10 +1,14 @@
 import React from 'react';
 import { FlexView } from '../../../flex';
+<<<<<<< c4e426ba275c7758b7b4bb59f81db60632d0feee
 <<<<<<< 392de274684b69f40edfe884a5e87555dbcaf006
 import Icon from '../../../Icon';
 =======
 import { Icon } from '../../../Icon';
 >>>>>>> kitchen-sink sections should be accordions
+=======
+import Icon from '../../../Icon';
+>>>>>>> fix Icon import in Accordion
 
 import './accordion.scss';
 
