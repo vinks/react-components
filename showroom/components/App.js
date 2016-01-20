@@ -4,7 +4,6 @@ import { RouteHandler } from 'react-router-transition-context';
 import lodash from 'lodash';
 import { find } from 'lodash';
 import { props, t } from 'tcomb-react';
-import { FlexView } from '../../src/flex';
 import SidebarContent from '../../src/kitchen-sink/sidebar/SidebarContent';
 import ReactSidebar from 'react-sidebar';
 import * as brc from '../../src';
@@ -44,7 +43,6 @@ export default class App extends React.Component {
   }
 
   loadJSON = () => {
-    const { query: { componentId } } = this.props;
     if (process.env.NODE_ENV === 'development') {
       const sections = JSON.parse(json)
       this.setState({ sections });
@@ -57,7 +55,7 @@ export default class App extends React.Component {
   onSelectItem = (sectionId, id) => {
     const section = find(this.state.sections, { id: sectionId });
     const route = section.components ? 'component' : 'content';
-    const param = route + 'Id';
+    const param = `${route}Id`;
     this.props.router.transitionToPatch(route, { sectionId, [param]: id });
   }
 
@@ -87,7 +85,9 @@ export default class App extends React.Component {
       <div>
         <div className='kitchen-sink'>
           <div className='sidebar'>
-            <ReactSidebar docked sidebar={<SidebarContent {...{ sections, onToggleSection, openSections, onSelectItem }} />} transitions={false} />
+            <ReactSidebar docked sidebar={<SidebarContent {...{ sections, onToggleSection, openSections, onSelectItem }} />} transitions={false}>
+              <div />
+            </ReactSidebar>
           </div>
         </div>
         <RouteHandler {...{ ...this.props, sections, openSections, onToggleSection, onSelectItem, scope }} />

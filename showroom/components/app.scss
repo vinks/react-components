@@ -15,3 +15,8 @@ body {
 .is-desktop #app {}
 
 .is-mobile #app {}
+
+@import '../../src/badge/badge.scss';
+@import '../../src/more-or-less/moreOrLess.scss';
+@import '../../src/confirmation-input/confirmationInput.scss';
+@import '../../src/toggle/toggle.scss';

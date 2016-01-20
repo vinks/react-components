@@ -33,7 +33,6 @@ export default class Content extends React.Component {
     this.axios.get(contentInfo.content)
       .then(res => {
         const content = res.data;
-        console.log(content);
         const contents = section.contents.map(c => c.id === contentId ? { ...c, content } : c);
         const mappedSections = sections.map(s => s.id === sectionId ? { ...s, contents } : s);
         this.setState({ sections: mappedSections, loading: false });
@@ -41,7 +40,7 @@ export default class Content extends React.Component {
   }
 
   render() {
-    const { sections: mappedSections = this.props.sections, loading } = this.state;
+    const { sections: mappedSections = this.props.sections } = this.state;
     const {
       params: { sectionId, contentId },
       onSelectItem,
