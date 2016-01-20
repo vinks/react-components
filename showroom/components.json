@@ -6,7 +6,7 @@
       {
         "id": "content-1",
         "title": "Content 1",
-        "content": "react-components/152-add_documentation_to_buildo/src/loading-spinner/README.md"
+        "content": "react-components/master/src/loading-spinner/README.md"
       }
     ]
   },
@@ -208,6 +208,66 @@
         "examples": [
           "react-components/master/examples/components/toaster/Inline.example",
           "react-components/master/examples/components/toaster/Attached.example"
+        ]
+      },
+      {
+        "id": "badge",
+        "title": "Badge",
+        "desc": "Badge",
+        "url": "https://github.com/buildo/react-components/tree/master/src/badge",
+        "component": "react-components/master/src/badge/Badge.js",
+        "examples": [
+          "react-components/master/examples/components/badge/default.example"
+        ]
+      },
+      {
+        "id": "more-or-less",
+        "title": "MoreOrLess",
+        "desc": "MoreOrLess",
+        "url": "https://github.com/buildo/react-components/tree/master/src/more-or-less",
+        "component": "react-components/master/src/more-or-less/MoreOrLess.js",
+        "examples": [
+          "react-components/master/examples/components/more-or-less/default.example"
+        ]
+      },
+      {
+        "id": "confirmation-input",
+        "title": "ConfirmationInput",
+        "desc": "ConfirmationInput",
+        "url": "https://github.com/buildo/react-components/tree/master/src/confirmation-input",
+        "component": "react-components/master/src/confirmation-input/ConfirmationInput.js",
+        "examples": [
+          "react-components/master/examples/components/confirmation-input/default.example"
+        ]
+      },
+      {
+        "id": "nav-bar",
+        "title": "NavBar",
+        "desc": "NavBar",
+        "url": "https://github.com/buildo/react-components/tree/master/src/nav-bar",
+        "component": "react-components/master/src/nav-bar/NavBar.js",
+        "examples": [
+          "react-components/master/examples/components/nav-bar/default.example"
+        ]
+      },
+      {
+        "id": "toggle",
+        "title": "Toggle",
+        "desc": "Toggle",
+        "url": "https://github.com/buildo/react-components/tree/master/src/toggle",
+        "component": "react-components/master/src/toggle/Toggle.js",
+        "examples": [
+          "react-components/master/examples/components/toggle/default.example"
+        ]
+      },
+      {
+        "id": "button",
+        "title": "Button",
+        "desc": "Button",
+        "url": "https://github.com/buildo/react-components/tree/master/src/button",
+        "component": "react-components/master/src/button/Button.js",
+        "examples": [
+          "react-components/master/examples/components/button/default.example"
         ]
       }
     ]
