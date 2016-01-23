@@ -49,6 +49,7 @@
           overflow: hidden;
         }
 
+<<<<<<< 4ea0879dac1fb21d6876d7c25a392719f94c4584
         .CodeMirror {
           height: auto;
         }
@@ -68,6 +69,11 @@
             margin-bottom: -28px;
           }
 
+=======
+        .playground {
+          @include display_flex();
+          @include flex_flex-direction(column-reverse);
+>>>>>>> display errors! finally
           .playgroundPreview {
             > div {
               > div {
@@ -76,6 +82,7 @@
 
               > .playgroundError {
                 display: block;
+<<<<<<< 4ea0879dac1fb21d6876d7c25a392719f94c4584
                 font-family: Consolas, Courier, monospace;
                 position: absolute;
                 width: 100%;
@@ -84,6 +91,12 @@
                 color: white;
                 background: #F2777A;
                 transform: translateY(-100%);
+=======
+                padding: 15px;
+                padding-top: 0;
+                font-family: Consolas, Courier, monospace;
+                color: red;
+>>>>>>> display errors! finally
               }
             }
           }
