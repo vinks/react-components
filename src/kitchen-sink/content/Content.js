@@ -33,7 +33,7 @@ export default class Content extends React.Component {
 =======
     return (
       <div className='content'>
-        <div className='body'>
+        <div className='body markdown-body'>
           <Markdown source={this.props.content.content} options={{ html: true }} />
 >>>>>>> refactor KitchenSink to show plain markdown sections too
         </div>

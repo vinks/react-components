@@ -40,7 +40,7 @@ export default class Content extends React.Component {
   }
 
   render() {
-    const { sections: mappedSections = this.props.sections } = this.state;
+    const { sections: mappedSections = this.props.sections, loading } = this.state;
     const {
       params: { sectionId, contentId },
       onSelectItem,
@@ -49,7 +49,7 @@ export default class Content extends React.Component {
     } = this.props;
     const sections = mappedSections || propSections;
 
-    return <KitchenSink {...{ sections, openSections, sectionId, onToggleSection, contentId, onSelectItem }} />;
+    return <KitchenSink {...{ sections, openSections, sectionId, onToggleSection, contentId, onSelectItem, loading }} />;
   }
 
   componentWillReceiveProps(nextProps) {

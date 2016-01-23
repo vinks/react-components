@@ -23,21 +23,29 @@ export default class Component extends React.Component {
     const { examples } = component || {};
     return (
       <div className='component'>
+<<<<<<< 54f48e0c636d871b74a157a9a3fd57aab072bf6c
 <<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
         <div className='header markdown-body'>
 =======
         <div className='header'>
 >>>>>>> refactor KitchenSink to show plain markdown sections too
+=======
+        <div className='header markdown-body'>
+>>>>>>> improve style: use github css + other fixes
           {header}
         </div>
         <div className='examples'>
           {examples ? examples.map((codeText, key) => <ExampleCard {...{ codeText, iso, scope, key }} />) : <LoadingSpinner />}
         </div>
+<<<<<<< 54f48e0c636d871b74a157a9a3fd57aab072bf6c
 <<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
         <div className='footer markdown-body'>
 =======
         <div className='footer'>
 >>>>>>> refactor KitchenSink to show plain markdown sections too
+=======
+        <div className='footer markdown-body'>
+>>>>>>> improve style: use github css + other fixes
           {footer}
         </div>
       </div>

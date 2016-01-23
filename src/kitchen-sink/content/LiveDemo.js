@@ -75,7 +75,7 @@ export default class LiveDemo extends React.Component {
     } = this;
 
     return (
-      <div className='live-demo'>
+      <div className='live-demo' style={{ overflow: 'hidden' }}>
         <div className='component' ref='contentNode' />
         {iso && <div className='iso-demo component' ref='contentNodeISO' />}
 <<<<<<< 284355914c8ef8a44e78f8a2f1f0a08ba78f4ca2
@@ -86,8 +86,12 @@ export default class LiveDemo extends React.Component {
 =======
         {!showCode && <div className='show-code cm-s-monokai CodeMirror' onClick={toggleCode}>SHOW CODE</div>}
         <MoreOrLess expanded={showCode} onExpandedChange={toggleCode} icons={{ expanded: 'angle-up', collapsed: 'angle-down' }}>
+<<<<<<< 54f48e0c636d871b74a157a9a3fd57aab072bf6c
           <div style={showCode ? undefined : { position: 'absolute', pointerEvent: 'none', opacity: 0, zIndex: -1 }}>
 >>>>>>> use MoreOrLess to toggle code in LiveDemo; improve style
+=======
+          <div style={showCode ? undefined : { position: 'absolute', pointerEvents: 'none', opacity: 0, height: 10, zIndex: -1 }}>
+>>>>>>> improve style: use github css + other fixes
             {this.contentNode &&
               <Playground codeText={codeText + footer} scope={{ ...scope, __render }} es6Console ref='playground' />
             }
