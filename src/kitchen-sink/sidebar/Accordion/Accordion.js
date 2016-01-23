@@ -84,6 +84,7 @@ export default class Accordion extends React.Component {
         <FlexView className='header' onClick={this.toggleOpen}>
           <div>{title}</div>
           <FlexView marginLeft='auto' shrink={false}>
+<<<<<<< bf2d28bedfac74a940a88deca7c7fd5b7519a507
 <<<<<<< 392de274684b69f40edfe884a5e87555dbcaf006
             <Icon icon={showContent ? 'angle-up' : 'angle-down'} />
           </FlexView>
@@ -91,6 +92,9 @@ export default class Accordion extends React.Component {
         {showContent &&
 =======
             <Icon icon='user' />
+=======
+            <Icon icon={showContent ? 'angle-up' : 'angle-down'} />
+>>>>>>> fix Accordion icons
           </FlexView>
         </FlexView>
 <<<<<<< 00c4ba345bf788190fa67bf64c63e9848d183a3b
