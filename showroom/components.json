@@ -42,8 +42,7 @@
         "url": "https://github.com/buildo/react-components/tree/master/src/Icon",
         "component": "react-components/master/src/Icon/Icon.js",
         "examples": [
-          "react-components/master/examples/components/Icon/default.example",
-          "react-components/master/examples/components/Icon/tooltipped.example"
+          "react-components/master/examples/components/Icon/default.example"
         ]
       },
       {
