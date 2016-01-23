@@ -75,7 +75,7 @@ export default class LiveDemo extends React.Component {
     } = this;
 
     return (
-      <div className='live-demo' style={{ overflow: 'hidden' }}>
+      <div className='live-demo'>
         <div className='component' ref='contentNode' />
         {iso && <div className='iso-demo component' ref='contentNodeISO' />}
 <<<<<<< 284355914c8ef8a44e78f8a2f1f0a08ba78f4ca2
@@ -83,6 +83,7 @@ export default class LiveDemo extends React.Component {
         {!showCode && <div className='show-code cm-s-monokai CodeMirror' onClick={toggleCode}>SHOW CODE</div>}
         <MoreOrLess expanded={showCode} onExpandedChange={toggleCode} icons={{ expanded: 'angle-up', collapsed: 'angle-down' }}>
           <div style={showCode ? undefined : { position: 'absolute', pointerEvents: 'none', opacity: 0, height: 10, zIndex: -1, overflow: 'hidden' }}>
+<<<<<<< 60dbdc00374ffc6172012aec87ae90f6d9e7d8bd
 =======
         {!showCode && <div className='show-code cm-s-monokai CodeMirror' onClick={toggleCode}>SHOW CODE</div>}
         <MoreOrLess expanded={showCode} onExpandedChange={toggleCode} icons={{ expanded: 'angle-up', collapsed: 'angle-down' }}>
@@ -92,6 +93,8 @@ export default class LiveDemo extends React.Component {
 =======
           <div style={showCode ? undefined : { position: 'absolute', pointerEvents: 'none', opacity: 0, height: 10, zIndex: -1 }}>
 >>>>>>> improve style: use github css + other fixes
+=======
+>>>>>>> style fixes
             {this.contentNode &&
               <Playground codeText={codeText + footer} scope={{ ...scope, __render }} es6Console ref='playground' />
             }
