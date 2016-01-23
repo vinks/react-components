@@ -75,11 +75,15 @@
           @include display_flex();
           @include flex_flex-direction(column-reverse);
 
+<<<<<<< 036f922941077ad57ac7f13c853231d518aa92da
 <<<<<<< 284355914c8ef8a44e78f8a2f1f0a08ba78f4ca2
+=======
+>>>>>>> improve code style/theme
           .playgroundStage {
             margin-bottom: -28px;
           }
 
+<<<<<<< 036f922941077ad57ac7f13c853231d518aa92da
 =======
         .playground {
           @include display_flex();
@@ -87,6 +91,8 @@
 >>>>>>> display errors! finally
 =======
 >>>>>>> use MoreOrLess to toggle code in LiveDemo; improve style
+=======
+>>>>>>> improve code style/theme
           .playgroundPreview {
             > div {
               > div {
