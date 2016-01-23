@@ -8,7 +8,7 @@ import SidebarContent from '../../src/kitchen-sink/sidebar/SidebarContent';
 import ReactSidebar from 'react-sidebar';
 import * as brc from '../../src';
 import * as RCDatepicker from 'rc-datepicker/src';
-import InputLink from 'react-input-link/src';
+import InputChildren from 'react-input-children/src';
 import TextareaAutosize from 'react-autosize-textarea/src';
 import { cookie, default as CookieBanner } from 'react-cookie-banner/src';
 import json from 'raw!../components.json';
@@ -20,7 +20,7 @@ const scope = {
   ...lodash,
   ...brc,
   ...RCDatepicker,
-  InputLink,
+  InputChildren,
   TextareaAutosize,
   cookie, CookieBanner
 };
@@ -44,7 +44,7 @@ export default class App extends React.Component {
 
   loadJSON = () => {
     if (process.env.NODE_ENV === 'development') {
-      const sections = JSON.parse(json)
+      const sections = JSON.parse(json);
       this.setState({ sections });
     } else {
       this.axios.get('react-components/gh-pages/showroom/components.json')

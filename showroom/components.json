@@ -80,16 +80,16 @@
         ]
       },
       {
-        "id": "react-input-link",
+        "id": "react-input-children",
         "title": "InputLink",
         "desc": "ReactInputLink is a replacement for the base input react component capable of rendering a child (link, button...) inside the input itself. It supports the same props of react input.",
-        "url": "https://github.com/buildo/react-input-link",
-        "component": "react-input-link/master/src/InputLink.js",
+        "url": "https://github.com/buildo/react-input-children",
+        "component": "react-input-children/master/src/InputLink.js",
         "examples": [
-          "react-input-link/master/examples/PlainText.example",
-          "react-input-link/master/examples/Password.example",
-          "react-input-link/master/examples/Button.example",
-          "react-input-link/master/examples/Anything.example"
+          "react-input-children/master/examples/PlainText.example",
+          "react-input-children/master/examples/Password.example",
+          "react-input-children/master/examples/Button.example",
+          "react-input-children/master/examples/Anything.example"
         ]
       },
       {

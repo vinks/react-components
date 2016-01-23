@@ -20,7 +20,7 @@ module.exports = {
           paths.COMPONENTS,
           paths.SRC,
           /rc-datepicker/,
-          /react-input-link/,
+          /react-input-children/,
           /react-autosize-textarea/,
           /react-cookie-banner/,
           /revenge-react-components/

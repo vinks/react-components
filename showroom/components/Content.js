@@ -36,7 +36,7 @@ export default class Content extends React.Component {
         const contents = section.contents.map(c => c.id === contentId ? { ...c, content } : c);
         const mappedSections = sections.map(s => s.id === sectionId ? { ...s, contents } : s);
         this.setState({ sections: mappedSections, loading: false });
-      })
+      });
   }
 
   render() {
