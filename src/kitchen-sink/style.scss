@@ -26,40 +26,13 @@
       box-shadow: 0 1px 4px 1px rgba(0,0,0,.1);
 
       .live-demo {
-<<<<<<< ca5f678f15845249a51e8250c5cd0d92845bf575
-<<<<<<< a8bcfc1d16dd0899b555a35b9a5b311c5f0117b1
-<<<<<<< c694c970d9b12370a21958d5d5381676dc83b432
-<<<<<<< 5a8683086308369f9a97ddddfc5c18b605776cf4
         position: relative;
         .playground, .CodeMirror {
           // border-bottom-left-radius: 5px;
           // border-bottom-right-radius: 5px;
-<<<<<<< 284355914c8ef8a44e78f8a2f1f0a08ba78f4ca2
-=======
-
-=======
->>>>>>> fix kitchen-sink live demo overflow
-        .playground {
-          border-top-left-radius: 5px;
-          border-top-right-radius: 5px;
->>>>>>> style fixes
-=======
-=======
-        position: relative;
->>>>>>> improve errors style
-        .playground, .CodeMirror {
-          border-bottom-left-radius: 5px;
-          border-bottom-right-radius: 5px;
->>>>>>> minor style improvements
           overflow: hidden;
         }
 
-<<<<<<< 4ea0879dac1fb21d6876d7c25a392719f94c4584
-=======
-          overflow: hidden;
-        }
-
->>>>>>> use MoreOrLess to toggle code in LiveDemo; improve style
         .CodeMirror {
           height: auto;
         }
@@ -75,24 +48,10 @@
           @include display_flex();
           @include flex_flex-direction(column-reverse);
 
-<<<<<<< 036f922941077ad57ac7f13c853231d518aa92da
-<<<<<<< 284355914c8ef8a44e78f8a2f1f0a08ba78f4ca2
-=======
->>>>>>> improve code style/theme
           .playgroundStage {
             margin-bottom: -28px;
           }
 
-<<<<<<< 036f922941077ad57ac7f13c853231d518aa92da
-=======
-        .playground {
-          @include display_flex();
-          @include flex_flex-direction(column-reverse);
->>>>>>> display errors! finally
-=======
->>>>>>> use MoreOrLess to toggle code in LiveDemo; improve style
-=======
->>>>>>> improve code style/theme
           .playgroundPreview {
             > div {
               > div {
@@ -101,8 +60,6 @@
 
               > .playgroundError {
                 display: block;
-<<<<<<< ca5f678f15845249a51e8250c5cd0d92845bf575
-<<<<<<< 4ea0879dac1fb21d6876d7c25a392719f94c4584
                 font-family: Consolas, Courier, monospace;
                 position: absolute;
                 width: 100%;
@@ -111,22 +68,6 @@
                 color: white;
                 background: #F2777A;
                 transform: translateY(-100%);
-=======
-                padding: 15px;
-                padding-top: 0;
-                font-family: Consolas, Courier, monospace;
-                color: red;
->>>>>>> display errors! finally
-=======
-                font-family: Consolas, Courier, monospace;
-                position: absolute;
-                width: 100%;
-                padding: 10px;
-                font-size: 12px;
-                color: white;
-                background: #F2777A;
-                transform: translateY(-100%);
->>>>>>> improve errors style
               }
             }
           }
@@ -137,23 +78,6 @@
           border-top-right-radius: 5px;
           padding: 15px;
           font-family: Consolas, Courier, monospace;
-        }
-      }
-    }
-
-    > .footer {
-      margin: 30px 50px;
-
-      table {
-        tr {
-          height: 30px;
-        }
-        thead th {
-          padding: 0 5px;
-          text-align: left;
-        }
-        tbody td {
-          padding: 0 5px;
         }
       }
     }

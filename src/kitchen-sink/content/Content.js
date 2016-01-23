@@ -10,32 +10,10 @@ export default class Content extends React.Component {
   }
 
   render() {
-<<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
-<<<<<<< 0bb8d30883ebffc86e98419f48b6a6995b84a2ce
     return (
       <div className='content'>
         <div className='body markdown-body'>
           <Markdown source={this.props.content.content} options={{ html: true }} />
-=======
-    const { scope, component, iso, header, footer } = this.props;
-    const { examples } = component || {};
-    return (
-      <div className='content'>
-        <div className='header'>
-          {header}
-        </div>
-        <div className='examples'>
-          {examples ? examples.map((codeText, key) => <ExampleCard {...{ codeText, iso, scope, key }} />) : <LoadingSpinner />}
-        </div>
-        <div className='footer'>
-          {footer}
->>>>>>> add header and footer to KitchenSink
-=======
-    return (
-      <div className='content'>
-        <div className='body markdown-body'>
-          <Markdown source={this.props.content.content} options={{ html: true }} />
->>>>>>> refactor KitchenSink to show plain markdown sections too
         </div>
       </div>
     );

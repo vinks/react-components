@@ -7,24 +7,10 @@ export default class Sidebar extends React.Component {
 
   static propTypes = {
     children: React.PropTypes.node.isRequired,
-<<<<<<< 00c4ba345bf788190fa67bf64c63e9848d183a3b
-<<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
     sections: React.PropTypes.array.isRequired,
     openSections: React.PropTypes.array.isRequired,
     onSelectItem: React.PropTypes.func.isRequired,
     onToggleSection: React.PropTypes.func,
-=======
-    sections: React.PropTypes.array,
-    components: React.PropTypes.array,
-    componentId: React.PropTypes.string,
-    onSelectItem: React.PropTypes.func.isRequired,
->>>>>>> refactor KitchenSink to show plain markdown sections too
-=======
-    sections: React.PropTypes.array.isRequired,
-    openSections: React.PropTypes.array.isRequired,
-    onSelectItem: React.PropTypes.func.isRequired,
-    onToggleSection: React.PropTypes.func,
->>>>>>> add sectionsOpen and onToggleSections to KitchenSink
     loading: React.PropTypes.bool
   }
 
