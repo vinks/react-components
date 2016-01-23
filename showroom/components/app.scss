@@ -48,6 +48,16 @@ body {
   }
 }
 
+.dropdown-menu {
+  padding: 7px 15px;
+  margin-left: auto;
+  width: auto;
+
+  &:before {
+    display: none;
+  }
+}
+
 
 // monokai
 
