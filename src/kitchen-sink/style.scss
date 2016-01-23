@@ -34,6 +34,7 @@
         .playground, .CodeMirror {
           // border-bottom-left-radius: 5px;
           // border-bottom-right-radius: 5px;
+<<<<<<< 284355914c8ef8a44e78f8a2f1f0a08ba78f4ca2
 =======
 
 =======
@@ -54,6 +55,11 @@
         }
 
 <<<<<<< 4ea0879dac1fb21d6876d7c25a392719f94c4584
+=======
+          overflow: hidden;
+        }
+
+>>>>>>> use MoreOrLess to toggle code in LiveDemo; improve style
         .CodeMirror {
           height: auto;
         }
@@ -69,6 +75,7 @@
           @include display_flex();
           @include flex_flex-direction(column-reverse);
 
+<<<<<<< 284355914c8ef8a44e78f8a2f1f0a08ba78f4ca2
           .playgroundStage {
             margin-bottom: -28px;
           }
@@ -78,6 +85,8 @@
           @include display_flex();
           @include flex_flex-direction(column-reverse);
 >>>>>>> display errors! finally
+=======
+>>>>>>> use MoreOrLess to toggle code in LiveDemo; improve style
           .playgroundPreview {
             > div {
               > div {

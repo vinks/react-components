@@ -2,11 +2,15 @@ import React from 'react';
 import LoadingSpinner from '../../loading-spinner';
 import ExampleCard from './ExampleCard';
 
+<<<<<<< 284355914c8ef8a44e78f8a2f1f0a08ba78f4ca2
 <<<<<<< 192c63eeef423357c5e0742f575625807303c2f9
 export default class Component extends React.Component {
 =======
 export default class Content extends React.Component {
 >>>>>>> refactor KitchenSink to show plain markdown sections too
+=======
+export default class Component extends React.Component {
+>>>>>>> use MoreOrLess to toggle code in LiveDemo; improve style
 
   static propTypes = {
     iso: React.PropTypes.bool,
