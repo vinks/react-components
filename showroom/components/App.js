@@ -2,7 +2,7 @@ import React from 'react';
 import _axios from 'axios';
 import { RouteHandler } from 'react-router-transition-context';
 import lodash from 'lodash';
-import { find } from 'lodash';
+import { find, uniq, flatten } from 'lodash';
 import { props, t } from 'tcomb-react';
 import SidebarContent from '../../src/kitchen-sink/sidebar/SidebarContent';
 import ReactSidebar from 'react-sidebar';
@@ -34,7 +34,8 @@ export default class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.axios = _axios.create({ baseURL: 'https://rawgit.com/buildo' });
+    this.rawgit = _axios.create({ baseURL: 'https://rawgit.com/buildo' });
+    this.github = _axios.create({ baseURL: 'https://api.github.com/repos/buildo/' });
     this.state = {};
   }
 
@@ -45,11 +46,33 @@ export default class App extends React.Component {
   loadJSON = () => {
     if (process.env.NODE_ENV === 'development') {
       const sections = JSON.parse(json);
-      this.setState({ sections });
+      this.getLastCommitHash({ data: sections })
+        .then(sections => this.setState({ sections }));
     } else {
-      this.axios.get('react-components/gh-pages/showroom/components.json')
-        .then((res) => this.setState({ sections: res.data }));
+      this.rawgit.get('react-components/gh-pages/showroom/components.json')
+        .then(this.getLastCommitHash)
+        .then((sections) => this.setState({ sections }));
     }
+  }
+
+  getLastCommitHash = (res) => {
+    const sections = res.data;
+    const items = flatten(sections.map(s => s.components || s.contents));
+    const repos = uniq(items, i => i.repo).map(i => i.repo);
+
+    const getHash = (repo) => cookie(repo) || this.github.get(repo + '/commits/master');
+
+    return Promise.all(repos.map(getHash))
+      .then(res => {
+        res.forEach((r, i) => cookie(repos[i]) !== r && cookie(repos[i], r.data.sha, 3600));
+        const getSha = r => r.data ? r.data.sha : r;
+
+        return sections.map(s => ({
+          ...s,
+          components: s.components ? s.components.map(c => ({ ...c, tag: getSha(res[repos.indexOf(c.repo)]) })) : undefined,
+          contents: s.contents ? s.contents.map(c => ({ ...c, tag: getSha(res[repos.indexOf(c.repo)]) })) : undefined
+        }));
+      });
   }
 
   onSelectItem = (sectionId, id) => {

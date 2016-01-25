@@ -6,6 +6,7 @@
       {
         "id": "readme",
         "title": "README.md",
+        "repo": "react-components",
         "content": "react-components/master/README.md"
       }
     ]
@@ -18,255 +19,279 @@
         "id": "divider",
         "title": "Divider",
         "desc": "Divider",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/Divider",
-        "component": "react-components/master/src/Divider/Divider.js",
+        "component": "react-components/__TAG__/src/Divider/Divider.js",
         "examples": [
-          "react-components/master/examples/components/Divider/default.example",
-          "react-components/master/examples/components/Divider/horizontal.example"
+          "react-components/__TAG__/examples/components/Divider/default.example",
+          "react-components/__TAG__/examples/components/Divider/horizontal.example"
         ]
       },
       {
         "id": "dropdown-menu",
         "title": "DropdownMenu",
         "desc": "DropdownMenu",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/DropdownMenu",
-        "component": "react-components/master/src/DropdownMenu/DropdownMenu.js",
+        "component": "react-components/__TAG__/src/DropdownMenu/DropdownMenu.js",
         "examples": [
-          "react-components/master/examples/components/DropdownMenu/default.example"
+          "react-components/__TAG__/examples/components/DropdownMenu/default.example"
         ]
       },
       {
         "id": "icon",
         "title": "Icon",
         "desc": "Icon",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/Icon",
-        "component": "react-components/master/src/Icon/Icon.js",
+        "component": "react-components/__TAG__/src/Icon/Icon.js",
         "examples": [
-          "react-components/master/examples/components/Icon/default.example"
+          "react-components/__TAG__/examples/components/Icon/default.example"
         ]
       },
       {
         "id": "panel",
         "title": "Panel",
         "desc": "Panel",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/Panel",
-        "component": "react-components/master/src/Panel/Panel.js",
+        "component": "react-components/__TAG__/src/Panel/Panel.js",
         "examples": [
-          "react-components/master/examples/components/Panel/floating.example",
-          "react-components/master/examples/components/Panel/docked.example",
-          "react-components/master/examples/components/Panel/tabbed.example"
+          "react-components/__TAG__/examples/components/Panel/floating.example",
+          "react-components/__TAG__/examples/components/Panel/docked.example",
+          "react-components/__TAG__/examples/components/Panel/tabbed.example"
         ]
       },
       {
         "id": "tooltip",
         "title": "Tooltip",
         "desc": "Tooltip",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/Tooltip",
-        "component": "react-components/master/src/Tooltip/Tooltip.js",
+        "component": "react-components/__TAG__/src/Tooltip/Tooltip.js",
         "examples": [
-          "react-components/master/examples/components/Tooltip/default.example"
+          "react-components/__TAG__/examples/components/Tooltip/default.example"
         ]
       },
       {
         "id": "rc-datepicker",
         "title": "Datepicker",
         "desc": "A decent and pretty date picker to be used with React",
+        "repo": "rc-datepicker",
         "url": "https://github.com/buildo/rc-datepicker",
-        "component": "rc-datepicker/master/src/DatePickerInput.js",
+        "component": "rc-datepicker/__TAG__/src/DatePickerInput.js",
         "examples": [
-          "rc-datepicker/master/examples/DatePickerInput.example",
-          "rc-datepicker/master/examples/DatePicker.example"
+          "rc-datepicker/__TAG__/examples/DatePickerInput.example",
+          "rc-datepicker/__TAG__/examples/DatePicker.example"
         ]
       },
       {
         "id": "react-input-children",
         "title": "InputChildren",
         "desc": "ReactInputChildren is a replacement for the base input react component capable of rendering a child (link, button...) inside the input itself. It supports the same props of react input.",
+        "repo": "react-input-children",
         "url": "https://github.com/buildo/react-input-children",
-        "component": "react-input-children/master/src/InputChildren.js",
+        "component": "react-input-children/__TAG__/src/InputChildren.js",
         "examples": [
-          "react-input-children/master/examples/PlainText.example",
-          "react-input-children/master/examples/Password.example",
-          "react-input-children/master/examples/Button.example",
-          "react-input-children/master/examples/Anything.example"
+          "react-input-children/__TAG__/examples/PlainText.example",
+          "react-input-children/__TAG__/examples/Password.example",
+          "react-input-children/__TAG__/examples/Button.example",
+          "react-input-children/__TAG__/examples/Anything.example"
         ]
       },
       {
         "id": "react-autosize-textarea",
         "title": "TextareaAutosize",
         "desc": "A textarea perfectly compatible with ReactJS default one which auto resizes its height based on user input.",
+        "repo": "react-autosize-textarea",
         "url": "https://github.com/buildo/react-autosize-textarea",
-        "component": "react-autosize-textarea/master/src/TextareaAutosize.js",
+        "component": "react-autosize-textarea/__TAG__/src/TextareaAutosize.js",
         "examples": [
-          "react-autosize-textarea/master/examples/Empty.example",
-          "react-autosize-textarea/master/examples/MinimumHeight.example",
-          "react-autosize-textarea/master/examples/Prefilled.example"
+          "react-autosize-textarea/__TAG__/examples/Empty.example",
+          "react-autosize-textarea/__TAG__/examples/MinimumHeight.example",
+          "react-autosize-textarea/__TAG__/examples/Prefilled.example"
         ]
       },
       {
         "id": "react-cookie-banner",
         "title": "CookieBanner",
         "desc": "React Cookie banner which can be automatically dismissed with a scroll. Because fuck The Cookie Law, that's why.",
+        "repo": "react-cookie-banner",
         "url": "https://github.com/buildo/react-cookie-banner",
-        "component": "react-cookie-banner/master/src/CookieBanner.js",
+        "component": "react-cookie-banner/__TAG__/src/CookieBanner.js",
         "examples": [
-          "react-cookie-banner/master/examples/Default.example"
+          "react-cookie-banner/__TAG__/examples/Default.example"
         ]
       },
       {
         "id": "background-dimmer",
         "title": "Background dimmer",
         "desc": "background dimmer",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/background-dimmer",
-        "component": "react-components/master/src/background-dimmer/BackgroundDimmer.js",
+        "component": "react-components/__TAG__/src/background-dimmer/BackgroundDimmer.js",
         "examples": [
-          "react-components/master/examples/components/BackgroundDimmer.example"
+          "react-components/__TAG__/examples/components/BackgroundDimmer.example"
         ]
       },
       {
         "id": "flex-view",
         "title": "FlexView",
         "desc": "FlexView",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/flex",
-        "component": "react-components/master/src/flex/FlexView.js",
+        "component": "react-components/__TAG__/src/flex/FlexView.js",
         "examples": [
-          "react-components/master/examples/components/flex/Column.example",
-          "react-components/master/examples/components/flex/Row.example"
+          "react-components/__TAG__/examples/components/flex/Column.example",
+          "react-components/__TAG__/examples/components/flex/Row.example"
         ]
       },
       {
         "id": "loading-spinner",
         "title": "LoadingSpinner",
         "desc": "LoadingSpinner",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/loading-spinner",
-        "component": "react-components/master/src/loading-spinner/LoadingSpinner.js",
+        "component": "react-components/__TAG__/src/loading-spinner/LoadingSpinner.js",
         "examples": [
-          "react-components/master/examples/components/LoadingSpinner.example"
+          "react-components/__TAG__/examples/components/LoadingSpinner.example"
         ]
       },
       {
         "id": "modal-manager",
         "title": "ModalManager",
         "desc": "ModalManager",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/modal-manager",
-        "component": "react-components/master/src/modal-manager/ModalManager.js",
+        "component": "react-components/__TAG__/src/modal-manager/ModalManager.js",
         "examples": [
-          "react-components/master/examples/components/ModalManager.example"
+          "react-components/__TAG__/examples/components/ModalManager.example"
         ]
       },
       {
         "id": "mobile-detector",
         "title": "MobileDetector",
         "desc": "MobileDetector",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/mobile-detector",
-        "component": "react-components/master/src/mobile-detector/MobileDetector.js",
+        "component": "react-components/__TAG__/src/mobile-detector/MobileDetector.js",
         "examples": [
-          "react-components/master/examples/components/MobileDetector.example"
+          "react-components/__TAG__/examples/components/MobileDetector.example"
         ]
       },
       {
         "id": "scroll-view",
         "title": "ScrollView",
         "desc": "ScrollView",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/scroll",
-        "component": "react-components/master/src/scroll/ScrollView.js",
+        "component": "react-components/__TAG__/src/scroll/ScrollView.js",
         "examples": [
-          "react-components/master/examples/components/scroll/StopPropagation.example",
-          "react-components/master/examples/components/scroll/ScrollTo.example"
+          "react-components/__TAG__/examples/components/scroll/StopPropagation.example",
+          "react-components/__TAG__/examples/components/scroll/ScrollTo.example"
         ]
       },
       {
         "id": "text-overflow",
         "title": "TextOverflow",
         "desc": "TextOverflow",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/text-overflow",
-        "component": "react-components/master/src/text-overflow/TextOverflow.js",
+        "component": "react-components/__TAG__/src/text-overflow/TextOverflow.js",
         "examples": [
-          "react-components/master/examples/components/text-overflow/Default.example",
-          "react-components/master/examples/components/text-overflow/CustomPopover.example",
-          "react-components/master/examples/components/text-overflow/WithFlexView.example"
+          "react-components/__TAG__/examples/components/text-overflow/Default.example",
+          "react-components/__TAG__/examples/components/text-overflow/CustomPopover.example",
+          "react-components/__TAG__/examples/components/text-overflow/WithFlexView.example"
         ]
       },
       {
         "id": "popover",
         "title": "Popover",
         "desc": "Popover",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/popover",
-        "component": "react-components/master/src/popover/Popover.js",
+        "component": "react-components/__TAG__/src/popover/Popover.js",
         "examples": [
-          "react-components/master/examples/components/popover/Relative.example",
-          "react-components/master/examples/components/popover/Absolute.example"
+          "react-components/__TAG__/examples/components/popover/Relative.example",
+          "react-components/__TAG__/examples/components/popover/Absolute.example"
         ]
       },
       {
         "id": "toaster",
         "title": "Toaster",
         "desc": "Toaster",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/toaster",
-        "component": "react-components/master/src/toaster/Toaster.js",
+        "component": "react-components/__TAG__/src/toaster/Toaster.js",
         "examples": [
-          "react-components/master/examples/components/toaster/Inline.example",
-          "react-components/master/examples/components/toaster/Attached.example"
+          "react-components/__TAG__/examples/components/toaster/Inline.example",
+          "react-components/__TAG__/examples/components/toaster/Attached.example"
         ]
       },
       {
         "id": "badge",
         "title": "Badge",
         "desc": "Badge",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/badge",
-        "component": "react-components/master/src/badge/Badge.js",
+        "component": "react-components/__TAG__/src/badge/Badge.js",
         "examples": [
-          "react-components/master/examples/components/badge/default.example"
+          "react-components/__TAG__/examples/components/badge/default.example"
         ]
       },
       {
         "id": "more-or-less",
         "title": "MoreOrLess",
         "desc": "MoreOrLess",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/more-or-less",
-        "component": "react-components/master/src/more-or-less/MoreOrLess.js",
+        "component": "react-components/__TAG__/src/more-or-less/MoreOrLess.js",
         "examples": [
-          "react-components/master/examples/components/more-or-less/default.example"
+          "react-components/__TAG__/examples/components/more-or-less/default.example"
         ]
       },
       {
         "id": "confirmation-input",
         "title": "ConfirmationInput",
         "desc": "ConfirmationInput",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/confirmation-input",
-        "component": "react-components/master/src/confirmation-input/ConfirmationInput.js",
+        "component": "react-components/__TAG__/src/confirmation-input/ConfirmationInput.js",
         "examples": [
-          "react-components/master/examples/components/confirmation-input/default.example"
+          "react-components/__TAG__/examples/components/confirmation-input/default.example"
         ]
       },
       {
         "id": "nav-bar",
         "title": "NavBar",
         "desc": "NavBar",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/nav-bar",
-        "component": "react-components/master/src/nav-bar/NavBar.js",
+        "component": "react-components/__TAG__/src/nav-bar/NavBar.js",
         "examples": [
-          "react-components/master/examples/components/nav-bar/default.example"
+          "react-components/__TAG__/examples/components/nav-bar/default.example"
         ]
       },
       {
         "id": "toggle",
         "title": "Toggle",
         "desc": "Toggle",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/toggle",
-        "component": "react-components/master/src/toggle/Toggle.js",
+        "component": "react-components/__TAG__/src/toggle/Toggle.js",
         "examples": [
-          "react-components/master/examples/components/toggle/default.example"
+          "react-components/__TAG__/examples/components/toggle/default.example"
         ]
       },
       {
         "id": "button",
         "title": "Button",
         "desc": "Button",
+        "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/button",
-        "component": "react-components/master/src/button/Button.js",
+        "component": "react-components/__TAG__/src/button/Button.js",
         "examples": [
-          "react-components/master/examples/components/button/default.example"
+          "react-components/__TAG__/examples/components/button/default.example"
         ]
       }
     ]

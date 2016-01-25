@@ -23,7 +23,7 @@ export default class Component extends React.Component {
 
   constructor(props) {
     super(props);
-    this.axios = _axios.create({ baseURL: 'https://rawgit.com/buildo' });
+    this.rawgitCDN = _axios.create({ baseURL: 'https://cdn.rawgit.com/buildo' });
     this.state = { loading: true };
   }
 
@@ -36,8 +36,8 @@ export default class Component extends React.Component {
 
     const componentInfo = find(section.components, { id: componentId });
 
-    const componentLink = this.axios.get(componentInfo.component);
-    const examplesLinks = componentInfo.examples.map(e => this.axios.get(e));
+    const componentLink = this.rawgitCDN.get(componentInfo.component.replace('__TAG__', componentInfo.tag));
+    const examplesLinks = componentInfo.examples.map(e => this.rawgitCDN.get(e.replace('__TAG__', componentInfo.tag)));
     _axios.all([componentLink].concat(examplesLinks))
       .then(res => {
         const component = parse(res[0].data);
