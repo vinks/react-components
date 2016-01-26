@@ -36,13 +36,13 @@ module.exports = assign({}, webpackBase, {
     port: '8080'
   },
 
-  plugins: [
+  plugins: webpackBase.plugins.concat([
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
     new HtmlWebpackPlugin({ bundle: false, templateContent: indexHtml }),
     new ExtractTextPlugin('style', 'style.[hash].min.css')
-  ],
+  ]),
 
   module: assign({}, webpackBase.module, {
     loaders: webpackBase.module.loaders.concat([

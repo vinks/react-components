@@ -10,6 +10,10 @@ var paths = {
 
 module.exports = {
 
+  plugins: [
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /de|fr|en/)
+  ],
+
   module: {
     loaders: [
       {

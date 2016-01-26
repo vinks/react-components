@@ -8,7 +8,7 @@ var assign = require('lodash/object').assign;
 var indexHtml = require('fs').readFileSync(path.resolve(__dirname, './index.html'), 'utf8');
 
 indexHtml = indexHtml.replace(/__GZIP__/g, '');
-indexHtml = indexHtml.replace(/__BUILD_PATH__/g, 'showroom/build/');
+indexHtml = indexHtml.replace(/__BUILD_PATH__/g, 'https://cdn.rawgit.com/buildo/react-components/gh-pages/showroom/build/');
 
 var paths = {
   SRC: path.resolve(__dirname),
@@ -24,7 +24,7 @@ module.exports = assign({}, webpackBase, {
     filename: 'app.[hash].js'
   },
 
-  plugins: [
+  plugins: webpackBase.plugins.concat([
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
@@ -40,7 +40,7 @@ module.exports = assign({}, webpackBase, {
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({ bundle: true, templateContent: indexHtml }),
     new ExtractTextPlugin('style', 'style.[hash].min.css')
-  ],
+  ]),
 
   module: assign({}, webpackBase.module, {
     loaders: webpackBase.module.loaders.concat([
