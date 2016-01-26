@@ -1,8 +1,11 @@
 import React from 'react';
 import _axios from 'axios';
 import { RouteHandler } from 'react-router-transition-context';
-import lodash from 'lodash';
-import { find, uniq, flatten } from 'lodash';
+import find from 'lodash/collection/find';
+import reject from 'lodash/collection/reject';
+import flatten from 'lodash/array/flatten';
+import uniq from 'lodash/array/uniq';
+import partial from 'lodash/function/partial';
 import { props, t } from 'tcomb-react';
 import SidebarContent from '../../src/kitchen-sink/sidebar/SidebarContent';
 import ReactSidebar from 'react-sidebar';
@@ -17,7 +20,7 @@ require('./app.scss');
 
 const scope = {
   React,
-  ...lodash,
+  ...{ find, partial, reject },
   ...brc,
   ...RCDatepicker,
   InputChildren,

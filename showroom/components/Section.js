@@ -1,6 +1,6 @@
 import React from 'react';
 import { props, t } from 'tcomb-react';
-import { find } from 'lodash';
+import find from 'lodash/collection/find';
 import Content from './Content';
 import Component from './Component';
 
