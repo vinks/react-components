@@ -293,6 +293,17 @@
         "examples": [
           "react-components/__TAG__/examples/components/button/default.example"
         ]
+      },
+      {
+        "id": "table",
+        "title": "Table",
+        "desc": "Table",
+        "repo": "react-components",
+        "url": "https://github.com/buildo/react-components/tree/master/src/table",
+        "component": "react-components/__TAG__/src/table/Table.js",
+        "examples": [
+          "react-components/__TAG__/examples/components/table/default.example"
+        ]
       }
     ]
   }
