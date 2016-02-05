@@ -21,6 +21,9 @@ import ConfirmationInput from 'raw!./confirmation-input/default.example';
 import Badge from 'raw!./badge/default.example';
 import NavBar from 'raw!./nav-bar/default.example';
 import Toggle from 'raw!./toggle/default.example';
+import Table from 'raw!./table/default.example';
+
+import README from 'raw!../../README.md';
 
 import '../../src/more-or-less/moreOrLess.scss';
 import '../../src/flex/flexView.scss';
@@ -28,6 +31,8 @@ import '../../src/loading-spinner/style.scss';
 import '../../src/confirmation-input/confirmationInput.scss';
 import '../../src/badge/badge.scss';
 import '../../src/toggle/toggle.scss';
+import '../../src/table/table.scss';
+import '../../node_modules/react-select/dist/default.css';
 
 export default [
   {
@@ -93,6 +98,12 @@ export default [
         id: 'Toggle',
         title: 'Toggle',
         'component': 'react-components/master/src/toggle/Toggle.js'
+      },
+      {
+        examples: [Table],
+        id: 'Table',
+        title: 'Table',
+        component: 'react-components/master/src/table/Table.js'
       }
     ]
   },
@@ -173,5 +184,17 @@ export default [
         'component': 'react-components/master/src/modal-manager/ModalManager.js'
       }
     ]
+  },
+  {
+    title: 'Markdown',
+    id: 'markdown',
+    contents: [
+      {
+        id: 'readme',
+        title: 'README.md',
+        repo: 'react-components',
+        content: README
+      }
+    ]
   }
-]
+];

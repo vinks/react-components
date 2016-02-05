@@ -20,17 +20,34 @@ export default class KitchenSink extends React.Component {
     header: React.PropTypes.node,
     footer: React.PropTypes.node,
     loading: React.PropTypes.bool
-  }
+  };
 
   static defaultProps = {
     openSections: []
-  }
+  };
 
-  findSection = () => find(this.props.sections, { id: this.props.sectionId }) || {}
+  findSection = () => find(this.props.sections, { id: this.props.sectionId }) || {};
 
-  findComponent = () => find(this.findSection().components, { id: this.props.componentId })
+  findComponent = () => find(this.findSection().components, { id: this.props.componentId });
 
-  findContent = () => find(this.findSection().contents, { id: this.props.contentId })
+  findContent = () => find(this.findSection().contents, { id: this.props.contentId });
+
+  getChildren = () => {
+    const {
+      componentId,
+      contentId,
+      scope,
+      iso,
+      header,
+      footer
+    } = this.props;
+    if (componentId) {
+      return <Component {...{ component: this.findComponent(), scope, iso, header, footer }} />;
+    } else if (contentId) {
+      return <Content content={this.findContent()} />;
+    }
+    return <div />;
+  };
 
   render() {
     const {
@@ -41,23 +58,14 @@ export default class KitchenSink extends React.Component {
         openSections,
         onSelectItem,
         onToggleSection,
-        scope,
-        iso,
-        header,
-        footer,
         loading
       }
     } = this;
 
-    const children = componentId ?
-      <Component {...{ component: this.findComponent(), scope, iso, header, footer }} />
-      :
-      <Content content={this.findContent()} />;
-
     return (
       <div className='kitchen-sink'>
         <Sidebar {...{ sections, openSections, onToggleSection, componentId, contentId, onSelectItem, loading }} >
-          {!loading && children}
+          {!loading && this.getChildren()}
         </Sidebar>
       </div>
     );

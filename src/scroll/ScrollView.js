@@ -1,5 +1,6 @@
 import React from 'react';
 import omit from 'lodash/object/omit';
+import { props, t } from '../utils';
 import easing from './easingFunctions';
 
 /**
@@ -8,65 +9,56 @@ import easing from './easingFunctions';
  * - smooth programmatic scroll with 22 easing functions (see `easingFunctions.js`)
  * - out of the box momentum scrolling on iOS
  */
-const propTypes = {
+const PropTypes = {
   /**
    * components/nodes content. If you need to scroll programmatically pass a function and save `scrollTo(x, y, milliseconds)` callback for later use (it will be passed as first argument) ex: `(scrollTo) => { this.scrollTo = scrollTo; return <MyScrollViewContent />; }`
    */
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.func,
-    React.PropTypes.node
-  ]).isRequired,
+  children: t.union([ t.ReactNode, t.Function ]),
   /**
    * enable horizontal scrolling
    */
-  scrollX: React.PropTypes.bool,
+  scrollX: t.maybe(t.Boolean),
   /**
    * enable vertical scrolling
    */
-  scrollY: React.PropTypes.bool,
+  scrollY: t.maybe(t.Boolean),
   /**
    * enable scroll propagation
    */
-  scrollPropagation: React.PropTypes.bool,
+  scrollPropagation: t.maybe(t.Boolean),
   /**
    * easing function used when scrolling with `scrollTo`
    */
-  easing: React.PropTypes.oneOf(Object.keys(easing)),
-  style: React.PropTypes.object
+  easing: t.maybe(t.enums.of(Object.keys(easing))),
+  /**
+   *  onScroll function that handle onScroll events
+   */
+  onScroll: t.maybe(t.Function),
+  style: t.maybe(t.Object)
 };
 
+@props(PropTypes, { strict: false })
 export default class ScrollView extends React.Component {
-
-  static propTypes = propTypes
 
   static defaultProps = {
     scrollX: true,
     scrollY: true,
     scrollPropagation: true,
-    easing: 'easeInOutQuad'
-  }
+    easing: 'easeInOutQuad',
+    onScroll: () => {}
+  };
 
-  componentDidMount() {
-    if (!this.props.scrollPropagation) {
-      this.disableScrollPropagation();
-    }
-  }
+  getScrollView = () => React.findDOMNode(this.refs.scrollView);
 
-  getScrollView = () => React.findDOMNode(this.refs.scrollView)
-
-  enableScrollPropagation = () => {
-    this.getScrollView().removeEventListener('wheel', this.stopScrollPropagation);
-    this.getScrollView().removeEventListener('touchstart', this.initializeTouchEventDirection);
-    this.getScrollView().removeEventListener('touchend', this.clearTouchEventDirection);
-    this.getScrollView().removeEventListener('touchmove', this.stopScrollPropagation);
-  }
-
-  disableScrollPropagation = () => {
-    this.getScrollView().addEventListener('wheel', this.stopScrollPropagation);
-    this.getScrollView().addEventListener('touchstart', this.initializeTouchEventDirection);
-    this.getScrollView().addEventListener('touchend', this.clearTouchEventDirection);
-    this.getScrollView().addEventListener('touchmove', this.stopScrollPropagation);
-  }
+  getEventListeners = () => {
+    return {
+      onWheel: this._onScroll,
+      onScroll: this.props.onScroll,
+      onTouchStart: this.initializeTouchEventDirection,
+      onTouchEnd: this.clearTouchEventDirection,
+      onTouchMove: this._onScroll
+    };
+  };
 
   isEventInsideScrollView = (el) => {
     if (el === this.getScrollView()) {
@@ -76,17 +68,17 @@ export default class ScrollView extends React.Component {
     } else {
       return false;
     }
-  }
+  };
 
   initializeTouchEventDirection = (e) => {
     this.lastY = e.touches[0].clientY;
-  }
+  };
 
   clearTouchEventDirection = () => {
     this.lastY = null;
-  }
+  };
 
-  stopScrollPropagation = (e) => {
+  stopScrollPropagation = ({ nativeEvent: e }) => {
     const el = e.target || e.srcElement;
     const isEventInsideScrollView = this.isEventInsideScrollView(el);
     if (isEventInsideScrollView) {
@@ -109,14 +101,14 @@ export default class ScrollView extends React.Component {
         e.preventDefault();
       }
     }
-  }
+  };
 
-  isAtTop = () => this.getScrollView().scrollTop === 0
+  isAtTop = () => this.getScrollView().scrollTop === 0;
 
   isAtBottom = () => {
     const { scrollTop, scrollHeight, offsetHeight } = this.getScrollView();
     return scrollTop + offsetHeight === scrollHeight;
-  }
+  };
 
   computeStyle = () => {
     const { scrollX, scrollY, style } = this.props;
@@ -126,7 +118,7 @@ export default class ScrollView extends React.Component {
       WebkitOverflowScrolling: 'touch',
       ...style
     };
-  }
+  };
 
   scrollTo = (_x, _y, scrollDuration) => {
     const { scrollTop, scrollLeft } = this.getScrollView();
@@ -134,14 +126,14 @@ export default class ScrollView extends React.Component {
     const y = _y === null ? scrollTop : _y;
 
     this._scrollTo(x, y, scrollDuration, Date.now(), scrollLeft, scrollTop);
-  }
+  };
 
   _scrollTo = (x, y, scrollDuration, startTime, startX, startY) => {
     if (scrollDuration > 0) {
       const { scrollTop, scrollLeft } = this.getScrollView();
       const easingFunction = easing[this.props.easing];
 
-      if ((typeof x === 'number' && scrollLeft !== x) || (typeof y === 'number' && scrollTop !== y)) {
+      if ((t.Number.is(x) && scrollLeft !== x) || (t.Number.is(y) && scrollTop !== y)) {
         const currentTime = Math.min(scrollDuration, (Date.now() - startTime));
         const distanceX = (x - startX);
         const distanceY = (y - startY);
@@ -154,31 +146,22 @@ export default class ScrollView extends React.Component {
       this.getScrollView().scrollLeft = x;
       this.getScrollView().scrollTop = y;
     }
-  }
+  };
+
+  _onScroll = (e) => {
+    if (!this.props.scrollPropagation) {
+      this.stopScrollPropagation(e);
+    }
+  };
 
   render() {
-    const props = omit(this.props, Object.keys(propTypes));
+    const props = omit(this.props, Object.keys(PropTypes));
     const { children } = this.props;
-    const isFunction = typeof children === 'function';
     return (
-      <div { ...props } style={this.computeStyle()} ref='scrollView'>
-        {isFunction ? children(this.scrollTo) : children}
+      <div { ...props } { ...this.getEventListeners() } style={this.computeStyle()} ref='scrollView'>
+        {t.Function.is(children) ? children(this.scrollTo) : children}
       </div>
     );
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.scrollPropagation && !this.props.scrollPropagation) {
-      this.enableScrollPropagation();
-    } else if (!nextProps.scrollPropagation && this.props.scrollPropagation) {
-      this.disableScrollPropagation();
-    }
-  }
-
-  componentWillUnmount() {
-    if (!this.props.scrollPropagation) {
-      this.enableScrollPropagation();
-    }
   }
 
 }

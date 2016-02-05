@@ -2,6 +2,7 @@ import React from 'react';
 import Select from 'react-select';
 import omit from 'lodash/object/omit';
 import cx from 'classnames';
+import { props, t } from '../utils';
 import { warn } from '../utils/log';
 
 const themes = {
@@ -9,34 +10,28 @@ const themes = {
 };
 
 const PropTypes = {
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.node,
-    React.PropTypes.element,
-    React.PropTypes.array
-  ]),
-  theme: React.PropTypes.oneOf(['semantic']),
-  valueLink: React.PropTypes.shape({
-    value: React.PropTypes.string,
-    requestChange: React.PropTypes.func
-  })
+  children: t.maybe(t.ReactNode),
+  theme: t.maybe(t.enums.of(['semantic'])),
+  valueLink: t.maybe(t.struct({
+    value: t.maybe(t.String),
+    requestChange: t.Function
+  }))
 };
-
+@props(PropTypes, { strict: false })
 export default class Dropdown extends React.Component {
 
-  static propTypes = PropTypes
+  getChildren = () => [].concat(this.props.children || []);
 
-  getChildren = () => [].concat(this.props.children || [])
+  renderOption = (option) => this.getChildren()[option.value];
 
-  renderOption = (option) => this.getChildren()[option.value]
-
-  renderValue = (option) => this.getChildren()[option.value]
+  renderValue = (option) => this.getChildren()[option.value];
 
   getGeneralProps = () => {
     if (this.props.children && this.props.options) {
       warn('You\'re passing both children and options. Children will override options!');
     }
     return omit(this.props, Object.keys(PropTypes));
-  }
+  };
 
   getChildrenProps = () => {
     if (this.props.children) {
@@ -53,7 +48,7 @@ export default class Dropdown extends React.Component {
         optionRenderer: this.renderOption
       };
     }
-  }
+  };
 
   getValueLinkProps = () => {
     if (this.props.valueLink) {
@@ -62,9 +57,9 @@ export default class Dropdown extends React.Component {
         onChange: this.props.valueLink.requestChange
       };
     }
-  }
+  };
 
-  getClassName = () => cx(this.props.className, themes[this.props.theme])
+  getClassName = () => cx(this.props.className, themes[this.props.theme]);
 
   render() {
     // The order is important: props may override previous ones

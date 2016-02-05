@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactTransitionGroup from 'react/lib/ReactTransitionGroup';
 import { warn } from '../utils/log';
+import { props, t } from '../utils';
 import FlexView from '../flex/FlexView';
 import TransitionWrapper from '../transition-wrapper/TransitionWrapper';
 
@@ -10,34 +11,33 @@ import TransitionWrapper from '../transition-wrapper/TransitionWrapper';
  * - renders one modal at a time
  * - supports animations (by using `TransitionWrapper`)
  */
+@props({
+  /**
+   * active modal component
+   */
+  children: t.maybe(t.ReactElement),
+  /**
+   * object with style for each transition event (used by TransitionWrapper)
+   */
+  transitionStyles: t.maybe(t.Object),
+  /**
+   * duration of enter transition in milliseconds (used by TransitionWrapper)
+   */
+  transitionEnterTimeout: t.maybe(t.Number),
+  /**
+   * duration of leave transition in milliseconds (used by TransitionWrapper)
+   */
+  transitionLeaveTimeout: t.maybe(t.Number),
+  /**
+   * callback to get custom context for modals. Can't be updated
+   */
+  getChildContext: t.maybe(t.Function),
+  /**
+   * static object to describe custom context object for modals. Can't be updated
+   */
+  childContextTypes: t.maybe(t.Object)
+})
 export default class ModalManager extends React.Component {
-
-  static propTypes = {
-    /**
-     * active modal component
-     */
-    children: React.PropTypes.element,
-    /**
-     * object with style for each transition event (used by TransitionWrapper)
-     */
-    transitionStyles: React.PropTypes.object,
-    /**
-     * duration of enter transition in milliseconds (used by TransitionWrapper)
-     */
-    transitionEnterTimeout: React.PropTypes.number,
-    /**
-     * duration of leave transition in milliseconds (used by TransitionWrapper)
-     */
-    transitionLeaveTimeout: React.PropTypes.number,
-    /**
-     * callback to get custom context for modals. Can't be updated
-     */
-    getChildContext: React.PropTypes.func,
-    /**
-     * static object to describe custom context object for modals. Can't be updated
-     */
-    childContextTypes: React.PropTypes.object
-  }
 
   static defaultProps = {
     transitionStyles: {},
@@ -45,18 +45,19 @@ export default class ModalManager extends React.Component {
     transitionLeaveTimeout: 0,
     childContextTypes: {},
     getChildContext: () => ({})
-  }
+  };
 
   componentWillMount() {
     const { childContextTypes, getChildContext } = this.props;
-    this.ContextWrapper = class ContextWrapper extends React.Component { // eslint-disable-line react/no-multi-comp
-      static propTypes = {
-        children: React.PropTypes.element.isRequired
-      }
-      static childContextTypes = childContextTypes
-      static getChildContext = getChildContext
-      render = () => this.props.children
-    };
+
+    @props({ children: t.ReactElement })
+    class ContextWrapper extends React.Component { // eslint-disable-line react/no-multi-comp
+      static childContextTypes = childContextTypes;
+      static getChildContext = getChildContext;
+      render = () => this.props.children;
+    }
+
+    this.ContextWrapper = ContextWrapper;
   }
 
   componentDidMount() {
@@ -106,21 +107,21 @@ export default class ModalManager extends React.Component {
         </TransitionWrapper>
       );
     });
-  }
+  };
 
   appendModalContainer = () => {
     if (!this.containerNode) {
       this.containerNode = document.createElement('div');
       document.body.appendChild(this.containerNode);
     }
-  }
+  };
 
   removeModalContainer = () => {
     if (this.containerNode) {
       document.body.removeChild(this.containerNode);
       this.containerNode = null;
     }
-  }
+  };
 
   getModalManager = () => {
     return (
@@ -130,12 +131,12 @@ export default class ModalManager extends React.Component {
         </ReactTransitionGroup>
       </div>
     );
-  }
+  };
 
   renderModals = () => {
     const Modal = this.getModalManager();
     React.render(<this.ContextWrapper>{Modal}</this.ContextWrapper>, this.containerNode);
-  }
+  };
 
   render() {
     return null;

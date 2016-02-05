@@ -1,80 +1,80 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import cx from 'classnames';
 import pick from 'lodash/object/pick';
 import omit from 'lodash/object/omit';
+import { props, t } from '../utils';
 
-const propTypes = {
+
+const PropTypes = {
   /**
    * FlexView content
    */
-  children: PropTypes.node,
+  children: t.ReactChildren,
   /**
    * flex-direction: column
    */
-  column: PropTypes.bool,
+  column: t.maybe(t.Boolean),
   /**
    * set flex: 0 0 100% NOTE: each property may be overwritten by their own props (grow, shrink, basis)
    */
-  auto: PropTypes.bool,
+  auto: t.maybe(t.Boolean),
   /**
    * align content vertically
    */
-  vAlignContent: PropTypes.oneOf(['top', 'center', 'bottom']),
+  vAlignContent: t.maybe(t.enums.of(['top', 'center', 'bottom'])),
   /**
    * align content horizontally
    */
-  hAlignContent: PropTypes.oneOf(['left', 'center', 'right']),
+  hAlignContent: t.maybe(t.enums.of(['left', 'center', 'right'])),
   /**
    * margin-left property ("auto" to align self right)
    */
-  marginLeft: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
+  marginLeft: t.maybe(t.union([ t.String, t.Number ])),
   /**
    * margin-top property ("auto" to align self bottom)
    */
-  marginTop: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
+  marginTop: t.maybe(t.union([ t.String, t.Number ])),
   /**
    * margin-right property ("auto" to align self left)
    */
-  marginRight: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
+  marginRight: t.maybe(t.union([ t.String, t.Number ])),
   /**
    * margin-bottom property ("auto" to align self top)
    */
-  marginBottom: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
+  marginBottom: t.maybe(t.union([ t.String, t.Number ])),
   /**
    * flex-grow property (for parent primary axis)
    */
-  grow: PropTypes.oneOfType([ PropTypes.bool, PropTypes.number ]),
+  grow: t.maybe(t.union([ t.Boolean, t.Number ])),
   /**
    * flex-shrink property
    */
-  shrink: PropTypes.oneOfType([ PropTypes.bool, PropTypes.number ]),
+  shrink: t.maybe(t.union([ t.Boolean, t.Number ])),
   /**
    * flex-basis property
    */
-  basis: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
+  basis: t.maybe(t.union([ t.String, t.Number ])),
   /**
    * wrap content
    */
-  wrap: PropTypes.bool,
+  wrap: t.maybe(t.Boolean),
   /**
    * height property (for parent secondary axis)
    */
-  height: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
+  height: t.maybe(t.union([ t.String, t.Number ])),
   /**
    * width property (for parent secondary axis)
    */
-  width: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
+  width: t.maybe(t.union([ t.String, t.Number ])),
   /**
    * DEPRECATED: use "basis" instead
    */
-  flexBasis: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
-  className: PropTypes.string,
-  style: PropTypes.object
+  flexBasis: t.maybe(t.union([ t.String, t.Number ])),
+  className: t.maybe(t.String),
+  style: t.maybe(t.Object)
 };
-
+@props(PropTypes, { strict: false })
 export default class FlexView extends React.Component {
-
-  static propTypes = propTypes
 
   getGrow = () => {
     const { grow } = this.props;
@@ -85,7 +85,7 @@ export default class FlexView extends React.Component {
     } else {
       return 0; // auto === true or default
     }
-  }
+  };
 
   getShrink = () => {
     const { shrink, basis, flexBasis, auto } = this.props;
@@ -103,7 +103,7 @@ export default class FlexView extends React.Component {
     } else {
       return 1; // grow === true or default
     }
-  }
+  };
 
   getBasis = () => {
     const { grow, shrink, basis, flexBasis, auto } = this.props;
@@ -116,7 +116,7 @@ export default class FlexView extends React.Component {
     } else {
       return 'auto'; // safe default
     }
-  }
+  };
 
   getFlexStyle = () => {
     const grow = this.getGrow();
@@ -130,7 +130,7 @@ export default class FlexView extends React.Component {
       WebkitFlex: values,
       flex: values
     };
-  }
+  };
 
   getStyle = () => {
     const style = pick(this.props, [
@@ -142,7 +142,7 @@ export default class FlexView extends React.Component {
       'marginBottom'
     ]);
     return { ...this.getFlexStyle(), ...style, ...this.props.style };
-  }
+  };
 
   getContentAlignmentClasses = () => {
     const vPrefix = this.props.column ? 'justify-content-' : 'align-content-';
@@ -164,19 +164,19 @@ export default class FlexView extends React.Component {
     const hAlignContent = hAlignContentClasses[this.props.hAlignContent];
 
     return cx(vAlignContent, hAlignContent);
-  }
+  };
 
   getClasses = () => {
     const direction = this.props.column ? 'flex-column' : 'flex-row';
     const contentAlignment = this.getContentAlignmentClasses();
     const wrap = this.props.wrap && 'flex-wrap';
     return cx('react-flex-view', direction, contentAlignment, wrap, this.props.className);
-  }
+  };
 
   render() {
     const className = this.getClasses();
     const style = this.getStyle();
-    const props = omit(this.props, Object.keys(propTypes));
+    const props = omit(this.props, Object.keys(PropTypes));
     return (
       <div className={className} style={style} { ...props }>
         {this.props.children}

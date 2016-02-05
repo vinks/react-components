@@ -12,7 +12,15 @@ export default class Sidebar extends React.Component {
     onSelectItem: React.PropTypes.func.isRequired,
     onToggleSection: React.PropTypes.func,
     loading: React.PropTypes.bool
-  }
+  };
+
+  getLoadingSpinner = () => {
+    return (
+      <div style={{ height: '100%', width: '100%', position: 'relative' }}>
+        <LoadingSpinner />
+      </div>
+    );
+  };
 
   render() {
     const { children, loading, ...props } = this.props;
@@ -20,7 +28,7 @@ export default class Sidebar extends React.Component {
     return (
       <div className='sidebar'>
         <ReactSidebar shadow={false} docked sidebar={sidebar} transitions={false}>
-          {loading ? <LoadingSpinner /> : children}
+          {loading ? this.getLoadingSpinner() : children}
         </ReactSidebar>
       </div>
     );
