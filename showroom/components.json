@@ -304,6 +304,30 @@
         "examples": [
           "react-components/__TAG__/examples/components/table/default.example"
         ]
+      },
+      {
+        "id": "meter",
+        "title": "Meter",
+        "desc": "Meter",
+        "repo": "react-components",
+        "url": "https://github.com/buildo/react-components/tree/master/src/meter",
+        "component": "react-components/__TAG__/src/meter/Meter.js",
+        "examples": [
+          "react-components/__TAG__/examples/components/meter/Meter.example",
+          "react-components/__TAG__/examples/components/meter/MeterWithHole.example",
+          "react-components/__TAG__/examples/components/meter/MeterCustomLabel.example"
+        ]
+      },
+      {
+        "id": "accordion",
+        "title": "Accordion",
+        "desc": "Accordion",
+        "repo": "react-components",
+        "url": "https://github.com/buildo/react-components/tree/master/src/accordion",
+        "component": "react-components/__TAG__/src/accordion/Accordion.js",
+        "examples": [
+          "react-components/__TAG__/examples/components/accordion/default.example"
+        ]
       }
     ]
   }
