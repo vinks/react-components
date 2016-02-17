@@ -74,56 +74,6 @@
         ]
       },
       {
-        "id": "rc-datepicker",
-        "title": "Datepicker",
-        "desc": "A decent and pretty date picker to be used with React",
-        "repo": "rc-datepicker",
-        "url": "https://github.com/buildo/rc-datepicker",
-        "component": "rc-datepicker/__TAG__/src/DatePickerInput.js",
-        "examples": [
-          "rc-datepicker/__TAG__/examples/DatePickerInput.example",
-          "rc-datepicker/__TAG__/examples/DatePicker.example"
-        ]
-      },
-      {
-        "id": "react-input-children",
-        "title": "InputChildren",
-        "desc": "ReactInputChildren is a replacement for the base input react component capable of rendering a child (link, button...) inside the input itself. It supports the same props of react input.",
-        "repo": "react-input-children",
-        "url": "https://github.com/buildo/react-input-children",
-        "component": "react-input-children/__TAG__/src/InputChildren.js",
-        "examples": [
-          "react-input-children/__TAG__/examples/PlainText.example",
-          "react-input-children/__TAG__/examples/Password.example",
-          "react-input-children/__TAG__/examples/Button.example",
-          "react-input-children/__TAG__/examples/Anything.example"
-        ]
-      },
-      {
-        "id": "react-autosize-textarea",
-        "title": "TextareaAutosize",
-        "desc": "A textarea perfectly compatible with ReactJS default one which auto resizes its height based on user input.",
-        "repo": "react-autosize-textarea",
-        "url": "https://github.com/buildo/react-autosize-textarea",
-        "component": "react-autosize-textarea/__TAG__/src/TextareaAutosize.js",
-        "examples": [
-          "react-autosize-textarea/__TAG__/examples/Empty.example",
-          "react-autosize-textarea/__TAG__/examples/MinimumHeight.example",
-          "react-autosize-textarea/__TAG__/examples/Prefilled.example"
-        ]
-      },
-      {
-        "id": "react-cookie-banner",
-        "title": "CookieBanner",
-        "desc": "React Cookie banner which can be automatically dismissed with a scroll. Because fuck The Cookie Law, that's why.",
-        "repo": "react-cookie-banner",
-        "url": "https://github.com/buildo/react-cookie-banner",
-        "component": "react-cookie-banner/__TAG__/src/CookieBanner.js",
-        "examples": [
-          "react-cookie-banner/__TAG__/examples/Default.example"
-        ]
-      },
-      {
         "id": "background-dimmer",
         "title": "Background dimmer",
         "desc": "background dimmer",
@@ -131,7 +81,7 @@
         "url": "https://github.com/buildo/react-components/tree/master/src/background-dimmer",
         "component": "react-components/__TAG__/src/background-dimmer/BackgroundDimmer.js",
         "examples": [
-          "react-components/__TAG__/examples/components/BackgroundDimmer.example"
+          "react-components/__TAG__/examples/components/background-dimmer/BackgroundDimmer.example"
         ]
       },
       {
@@ -154,7 +104,7 @@
         "url": "https://github.com/buildo/react-components/tree/master/src/loading-spinner",
         "component": "react-components/__TAG__/src/loading-spinner/LoadingSpinner.js",
         "examples": [
-          "react-components/__TAG__/examples/components/LoadingSpinner.example"
+          "react-components/__TAG__/examples/components/loading-spinner/LoadingSpinner.example"
         ]
       },
       {
@@ -165,7 +115,7 @@
         "url": "https://github.com/buildo/react-components/tree/master/src/modal-manager",
         "component": "react-components/__TAG__/src/modal-manager/ModalManager.js",
         "examples": [
-          "react-components/__TAG__/examples/components/ModalManager.example"
+          "react-components/__TAG__/examples/components/modal-manager/ModalManager.example"
         ]
       },
       {
@@ -176,7 +126,7 @@
         "url": "https://github.com/buildo/react-components/tree/master/src/mobile-detector",
         "component": "react-components/__TAG__/src/mobile-detector/MobileDetector.js",
         "examples": [
-          "react-components/__TAG__/examples/components/MobileDetector.example"
+          "react-components/__TAG__/examples/components/mobile-detector/MobileDetector.example"
         ]
       },
       {
@@ -185,7 +135,7 @@
         "desc": "ScrollView",
         "repo": "react-components",
         "url": "https://github.com/buildo/react-components/tree/master/src/scroll",
-        "component": "react-components/__TAG__/src/scroll/ScrollView.js",
+        "component": "react-components/__TAG__/src/scroll/scroll/ScrollView.js",
         "examples": [
           "react-components/__TAG__/examples/components/scroll/StopPropagation.example",
           "react-components/__TAG__/examples/components/scroll/ScrollTo.example"
@@ -327,6 +277,56 @@
         "component": "react-components/__TAG__/src/accordion/Accordion.js",
         "examples": [
           "react-components/__TAG__/examples/components/accordion/default.example"
+        ]
+      },
+      {
+        "id": "rc-datepicker",
+        "title": "Datepicker",
+        "desc": "A decent and pretty date picker to be used with React",
+        "repo": "rc-datepicker",
+        "url": "https://github.com/buildo/rc-datepicker",
+        "component": "rc-datepicker/__TAG__/src/DatePickerInput.js",
+        "examples": [
+          "rc-datepicker/__TAG__/examples/DatePickerInput.example",
+          "rc-datepicker/__TAG__/examples/DatePicker.example"
+        ]
+      },
+      {
+        "id": "react-input-children",
+        "title": "InputChildren",
+        "desc": "ReactInputChildren is a replacement for the base input react component capable of rendering a child (link, button...) inside the input itself. It supports the same props of react input.",
+        "repo": "react-input-children",
+        "url": "https://github.com/buildo/react-input-children",
+        "component": "react-input-children/__TAG__/src/InputChildren.js",
+        "examples": [
+          "react-input-children/__TAG__/examples/PlainText.example",
+          "react-input-children/__TAG__/examples/Password.example",
+          "react-input-children/__TAG__/examples/Button.example",
+          "react-input-children/__TAG__/examples/Anything.example"
+        ]
+      },
+      {
+        "id": "react-autosize-textarea",
+        "title": "TextareaAutosize",
+        "desc": "A textarea perfectly compatible with ReactJS default one which auto resizes its height based on user input.",
+        "repo": "react-autosize-textarea",
+        "url": "https://github.com/buildo/react-autosize-textarea",
+        "component": "react-autosize-textarea/__TAG__/src/TextareaAutosize.js",
+        "examples": [
+          "react-autosize-textarea/__TAG__/examples/Empty.example",
+          "react-autosize-textarea/__TAG__/examples/MinimumHeight.example",
+          "react-autosize-textarea/__TAG__/examples/Prefilled.example"
+        ]
+      },
+      {
+        "id": "react-cookie-banner",
+        "title": "CookieBanner",
+        "desc": "React Cookie banner which can be automatically dismissed with a scroll. Because fuck The Cookie Law, that's why.",
+        "repo": "react-cookie-banner",
+        "url": "https://github.com/buildo/react-cookie-banner",
+        "component": "react-cookie-banner/__TAG__/src/CookieBanner.js",
+        "examples": [
+          "react-cookie-banner/__TAG__/examples/Default.example"
         ]
       }
     ]
