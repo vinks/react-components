@@ -15,10 +15,6 @@ const PropTypes = {
    */
   column: t.maybe(t.Boolean),
   /**
-   * set flex: 0 0 100% NOTE: each property may be overwritten by their own props (grow, shrink, basis)
-   */
-  auto: t.maybe(t.Boolean),
-  /**
    * align content vertically
    */
   vAlignContent: t.maybe(t.enums.of(['top', 'center', 'bottom'])),
@@ -66,10 +62,6 @@ const PropTypes = {
    * width property (for parent secondary axis)
    */
   width: t.maybe(t.union([ t.String, t.Number ])),
-  /**
-   * DEPRECATED: use "basis" instead
-   */
-  flexBasis: t.maybe(t.union([ t.String, t.Number ])),
   className: t.maybe(t.String),
   style: t.maybe(t.Object)
 };
@@ -82,13 +74,13 @@ export default class FlexView extends React.Component {
       return grow;
     } else if (grow) {
       return 1;
-    } else {
-      return 0; // auto === true or default
     }
+
+    return 0; // default
   };
 
   getShrink = () => {
-    const { shrink, basis, flexBasis, auto } = this.props;
+    const { shrink, basis } = this.props;
     if (typeof shrink === 'number') {
       return shrink;
     } else if (shrink) {
@@ -97,25 +89,21 @@ export default class FlexView extends React.Component {
       return 0;
     }
 
-
-    if (basis || flexBasis || auto) {
+    if (basis) {
       return 0;
-    } else {
-      return 1; // grow === true or default
     }
+
+    return 1; // default
   };
 
   getBasis = () => {
-    const { grow, shrink, basis, flexBasis, auto } = this.props;
-    const _basis = basis || flexBasis;
-    if (_basis) {
-      const suffix = typeof _basis === 'number' ? 'px' : '';
-      return _basis + suffix;
-    } else if (grow && !shrink && !auto) {
-      return '100%';
-    } else {
-      return 'auto'; // safe default
+    const { basis } = this.props;
+    if (basis) {
+      const suffix = t.Number.is(basis) ? 'px' : '';
+      return basis + suffix;
     }
+
+    return 'auto'; // default
   };
 
   getFlexStyle = () => {
