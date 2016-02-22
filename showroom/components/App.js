@@ -63,7 +63,7 @@ export default class App extends React.Component {
     const items = flatten(sections.map(s => s.components || s.contents));
     const repos = uniq(items, i => i.repo).map(i => i.repo);
 
-    const getHash = (repo) => cookie(repo) || this.github.get(repo + '/commits/master');
+    const getHash = (repo) => cookie(repo) || this.github.get(`${repo}/commits/master`);
 
     return Promise.all(repos.map(getHash))
       .then(res => {
