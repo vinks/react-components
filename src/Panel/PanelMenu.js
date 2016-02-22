@@ -70,7 +70,7 @@ export default class PanelMenu extends React.Component {
   );
 
   makeSelectableAction = ({ name, selected }) => (
-    <FlexView row vAlignContent="center">
+    <FlexView row vAlignContent='center'>
       <i
         style={{
           marginRight: 6,
@@ -130,7 +130,7 @@ export default class PanelMenu extends React.Component {
 
   template(locals) {
     return (
-      <FlexView className='panel-menu' marginLeft='auto' vAlignContent='center'>
+      <FlexView className='panel-menu' marginLeft='auto' vAlignContent='center' shrink={false}>
         {locals.actionIcons.map( ({ icon, color, label, disabled, onClick }, i) => (
           <TooltippedIcon
             className='panel-menu-action-icon'
