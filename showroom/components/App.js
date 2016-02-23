@@ -6,6 +6,7 @@ import reject from 'lodash/collection/reject';
 import flatten from 'lodash/array/flatten';
 import uniq from 'lodash/array/uniq';
 import partial from 'lodash/function/partial';
+import sortBy from 'lodash/collection/sortBy';
 import { props, t } from 'tcomb-react';
 import SidebarContent from '../../src/kitchen-sink/sidebar/SidebarContent';
 import ReactSidebar from 'react-sidebar';
@@ -72,8 +73,8 @@ export default class App extends React.Component {
 
         return sections.map(s => ({
           ...s,
-          components: s.components ? s.components.map(c => ({ ...c, tag: getSha(res[repos.indexOf(c.repo)]) })) : undefined,
-          contents: s.contents ? s.contents.map(c => ({ ...c, tag: getSha(res[repos.indexOf(c.repo)]) })) : undefined
+          components: s.components ? sortBy(s.components, 'title').map(c => ({ ...c, tag: getSha(res[repos.indexOf(c.repo)]) })) : undefined,
+          contents: s.contents ? sortBy(s.contents, 'title').map(c => ({ ...c, tag: getSha(res[repos.indexOf(c.repo)]) })) : undefined
         }));
       });
   }
