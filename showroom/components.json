@@ -281,14 +281,14 @@
         ]
       },
       {
-        "id": "accordion",
-        "title": "Accordion",
-        "desc": "Accordion",
+        "id": "collapsable-section",
+        "title": "CollapsableSection",
+        "desc": "CollapsableSection",
         "repo": "react-components",
-        "url": "https://github.com/buildo/react-components/tree/master/src/accordion",
-        "component": "react-components/__TAG__/src/accordion/Accordion.js",
+        "url": "https://github.com/buildo/react-components/tree/master/src/collapsable-section",
+        "component": "react-components/__TAG__/src/collapsable-section/CollapsableSection.js",
         "examples": [
-          "react-components/__TAG__/examples/components/accordion/default.example"
+          "react-components/__TAG__/examples/components/collapsable-section/default.example"
         ]
       },
       {
@@ -311,6 +311,29 @@
         "component": "react-components/__TAG__/src/browser-detector/BrowserDetector.js",
         "examples": [
           "react-components/__TAG__/examples/components/browser-detector/default.example"
+        ]
+      },
+      {
+        "id": "time-picker",
+        "title": "TimePicker",
+        "desc": "TimePicker",
+        "repo": "react-components",
+        "url": "https://github.com/buildo/react-components/tree/master/src/time-picker",
+        "component": "react-components/__TAG__/src/time-picker/TimePicker.js",
+        "examples": [
+          "react-components/__TAG__/examples/components/time-picker/TimePicker24.example",
+          "react-components/__TAG__/examples/components/time-picker/TimePicker12.example"
+        ]
+      },
+      {
+        "id": "accordion",
+        "title": "Accordion",
+        "desc": "Accordion",
+        "repo": "react-components",
+        "url": "https://github.com/buildo/react-components/tree/master/src/accordion",
+        "component": "react-components/__TAG__/src/accordion/Accordion.js",
+        "examples": [
+          "react-components/__TAG__/examples/components/accordion/default.example"
         ]
       },
       {
