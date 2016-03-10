@@ -1,12 +1,12 @@
 import React from 'react';
 import _axios from 'axios';
 import { RouteHandler } from 'react-router-transition-context';
-import find from 'lodash/collection/find';
-import reject from 'lodash/collection/reject';
-import flatten from 'lodash/array/flatten';
-import uniq from 'lodash/array/uniq';
-import partial from 'lodash/function/partial';
-import sortBy from 'lodash/collection/sortBy';
+import find from 'lodash/find';
+import reject from 'lodash/reject';
+import flatten from 'lodash/flatten';
+import uniq from 'lodash/uniq';
+import partial from 'lodash/partial';
+import sortBy from 'lodash/sortBy';
 import { props, t } from 'tcomb-react';
 import SidebarContent from '../../src/kitchen-sink/sidebar/SidebarContent';
 import ReactSidebar from 'react-sidebar';

@@ -1,6 +1,6 @@
 import React from 'react';
 import _axios from 'axios';
-import find from 'lodash/collection/find';
+import find from 'lodash/find';
 import { props, t } from 'tcomb-react';
 import KitchenSink from '../../src/kitchen-sink';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import _axios from 'axios';
 import { parse } from 'react-docgen';
 import { props, t } from 'tcomb-react';
-import find from 'lodash/collection/find';
+import find from 'lodash/find';
 import Markdown from 'react-remarkable';
 import generateMarkdown from '../../generateReadmes/generateMarkdown';
 import KitchenSink from '../../src/kitchen-sink';
