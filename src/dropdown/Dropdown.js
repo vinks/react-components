@@ -1,76 +1,71 @@
 import React from 'react';
+import { props, t, skinnable } from '../utils';
 import Select from 'react-select';
-import omit from 'lodash/object/omit';
+import find from 'lodash/find';
 import cx from 'classnames';
-import { props, t } from '../utils';
 import { warn } from '../utils/log';
 
-const themes = {
-  semantic: 'semantic-theme'
+const PropTypes = {
+  value: t.maybe(t.union([t.Number, t.String, t.Object])),
+  valueLink: t.maybe(t.struct({
+    value: t.maybe(t.union([t.Number, t.String, t.Object])),
+    requestChange: t.Function
+  })),
+  onChange: t.maybe(t.Function),
+  options: t.Array,
+  id: t.maybe(t.String),
+  className: t.maybe(t.String),
+  style: t.maybe(t.Object)
 };
 
-const PropTypes = {
-  children: t.maybe(t.ReactNode),
-  theme: t.maybe(t.enums.of(['semantic'])),
-  valueLink: t.maybe(t.struct({
-    value: t.maybe(t.String),
-    requestChange: t.Function
-  }))
-};
+@skinnable()
 @props(PropTypes, { strict: false })
 export default class Dropdown extends React.Component {
 
-  getChildren = () => [].concat(this.props.children || []);
-
-  renderOption = (option) => this.getChildren()[option.value];
-
-  renderValue = (option) => this.getChildren()[option.value];
-
-  getGeneralProps = () => {
-    if (this.props.children && this.props.options) {
-      warn('You\'re passing both children and options. Children will override options!');
-    }
-    return omit(this.props, Object.keys(PropTypes));
-  };
-
-  getChildrenProps = () => {
-    if (this.props.children) {
-      const options = this.getChildren().map((c, index) => {
-        return {
-          value: index,
-          label: index
-        };
-      });
-
-      return {
-        options,
-        valueRenderer: this.renderValue,
-        optionRenderer: this.renderOption
-      };
-    }
-  };
-
-  getValueLinkProps = () => {
-    if (this.props.valueLink) {
-      return {
-        value: this.props.valueLink.value,
-        onChange: this.props.valueLink.requestChange
-      };
-    }
-  };
-
-  getClassName = () => cx(this.props.className, themes[this.props.theme]);
-
-  render() {
-    // The order is important: props may override previous ones
-    return (
-      <Select
-        {...this.getGeneralProps()}
-        {...this.getChildrenProps()}
-        {...this.getValueLinkProps()}
-        {...this.getClassName()}
-      />
-    );
+  componentDidMount() {
+    this.logWarnings();
   }
 
+  logWarnings = () => {
+    if (this.props.children) {
+      warn('You\'re passing children. Not expected behaviour');
+    }
+  };
+
+  getValue = () => (
+    this.props.valueLink ? this.props.valueLink.value : this.props.value
+  );
+
+  valueToOption = (value, options) => {
+    if (t.String.is(value) || t.Number.is(value)) {
+      return find(options, { value });
+    }
+    return value;
+  };
+
+  getOnChange = () => this.props.valueLink ? this.props.valueLink.requestChange : this.props.onChange;
+
+  _onBlur = () => this.forceUpdate();
+
+  getLocals() {
+    const {
+      className,
+      options,
+      valueLink,
+      ...props
+    } = this.props;
+
+    return {
+      ...props,
+      options,
+      className: cx('dropdown', className),
+      value: this.valueToOption(this.getValue(), options),
+      onChange: this.getOnChange(),
+      onBlur: this._onBlur
+    };
+  }
+
+  template(locals) {
+    return <Select {...locals} />;
+  }
 }
