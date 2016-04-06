@@ -1,9 +1,10 @@
 import React from 'react';
+import omit from 'lodash/omit';
 import { props, t } from '../utils';
 
 
 @props({
-  children: t.ReactNode,
+  children: t.ReactChildren,
   onTimeout: t.Function,
   duration: t.Number,
   uniqueKey: t.maybe(t.String),
@@ -42,9 +43,9 @@ export default class TimerToast extends React.Component {
   };
 
   render() {
-    const { children, onTimeout, duration, ...props } = this.props;
+    const { children, ...props } = this.props;
     return (
-      <div {...props} onMouseEnter={this.clearTimer} onMouseLeave={this.resetTimer}>
+      <div {...omit(props, ['onTimeout', 'duration'])} onMouseEnter={this.clearTimer} onMouseLeave={this.resetTimer}>
         {children}
       </div>
     );
