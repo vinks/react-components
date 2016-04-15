@@ -17,6 +17,7 @@ import TextareaAutosize from 'react-autosize-textarea/src';
 import { cookie, default as CookieBanner } from 'react-cookie-banner/src';
 import json from 'raw!../components.json';
 
+require('../../examples/components/styles');
 require('./app.scss');
 
 const scope = {
