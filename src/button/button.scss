@@ -59,6 +59,9 @@ $tiny-height: 18px !default;
 $tiny-font-size: 12px !default;
 $tiny-horizontal-padding: 6px !default;
 
+$disabled-button-opacity: .6 !default;
+$disabled-button-cursor: not-allowed !default;
+
 .button .button-inner {
   // commons
   position: relative;
@@ -91,7 +94,7 @@ $tiny-horizontal-padding: 6px !default;
     background: $default-background;
     border: $default-border-width solid $default-border-color;
     color: $default-color;
-    &:hover:not(.not-allowed) {
+    &:hover:not(.is-not-allowed) {
       background: $default-background-hover;
     }
   }
@@ -99,7 +102,7 @@ $tiny-horizontal-padding: 6px !default;
     background: $primary-background;
     border: $primary-border-width solid $primary-border-color;
     color: $primary-color;
-    &:hover:not(.not-allowed) {
+    &:hover:not(.is-not-allowed) {
       background: $primary-background-hover;
     }
   }
@@ -107,7 +110,7 @@ $tiny-horizontal-padding: 6px !default;
     background: $positive-background;
     border: $positive-border-width solid $positive-border-color;
     color: $positive-color;
-    &:hover:not(.not-allowed) {
+    &:hover:not(.is-not-allowed) {
       background: $positive-background-hover;
     }
   }
@@ -115,7 +118,7 @@ $tiny-horizontal-padding: 6px !default;
     background: $negative-background;
     border: $negative-border-width solid $negative-border-color;
     color: $negative-color;
-    &:hover:not(.not-allowed) {
+    &:hover:not(.is-not-allowed) {
       background: $negative-background-hover;
     }
   }
@@ -124,7 +127,7 @@ $tiny-horizontal-padding: 6px !default;
     border: $flat-border-width solid $flat-border-color;
     color: $flat-color;
     padding: 0 $flat-horizontal-padding !important; //!important because it should not be ovverridden by small/tiny variations
-    &:hover:not(.not-allowed) {
+    &:hover:not(.is-not-allowed) {
       background: $flat-background-hover;
       border: $flat-border-width-hover solid $flat-border-color-hover;
     }
@@ -136,6 +139,15 @@ $tiny-horizontal-padding: 6px !default;
     &.circular {
       border-radius: 100% !important;//!important because it should not be ovverridden by small/tiny variations
       padding: $icon-button-circular-padding !important;//!important because it should not be ovverridden by small/tiny variations
+      &.is-medium {
+        width: $medium-height;
+      }
+      &.is-small {
+        width: $small-height;
+      }
+      &.is-tiny {
+        width: $tiny-height;
+      }
     }
   }
 
@@ -157,8 +169,8 @@ $tiny-horizontal-padding: 6px !default;
   }
 
   &.is-not-allowed {
-    opacity: .6;
-    cursor: not-allowed;
+    opacity: $disabled-button-opacity;
+    cursor: $disabled-button-cursor;
   }
 
 }
