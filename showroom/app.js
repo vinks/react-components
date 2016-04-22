@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, create } from 'react-router-transition-context';
+import { Route, create } from 'react-router';
 import patchReactRouter from './patch-react-router';
 import App from './components/App';
 import Section from './components/Section';

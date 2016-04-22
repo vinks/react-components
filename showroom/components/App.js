@@ -1,6 +1,6 @@
 import React from 'react';
 import _axios from 'axios';
-import { RouteHandler } from 'react-router-transition-context';
+import { RouteHandler } from 'react-router';
 import find from 'lodash/find';
 import reject from 'lodash/reject';
 import flatten from 'lodash/flatten';
