@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Route, create } from 'react-router';
 import patchReactRouter from './patch-react-router';
 import App from './components/App';
@@ -26,5 +27,5 @@ const router = patchReactRouter(create({ routes }));
 
 router.run((Handler, { params, query }) => {
   // RENDERS
-  React.render(<Handler {...{ router, params, query }} />, document.getElementById('app'));
+  ReactDOM.render(<Handler {...{ router, params, query }} />, document.getElementById('app'));
 });
