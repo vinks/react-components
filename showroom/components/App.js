@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import _axios from 'axios';
 import { RouteHandler } from 'react-router';
 import find from 'lodash/find';
@@ -21,7 +22,8 @@ require('../../examples/components/styles');
 require('./app.scss');
 
 const scope = {
-  React,
+  React, ReactDOM,
+  log: (...x) => console.log(...x), // eslint-disable-line no-console
   ...{ find, partial, reject },
   ...brc,
   ...RCDatepicker,
